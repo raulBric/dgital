@@ -7,7 +7,8 @@ import ServicesSection from './ServiceSection';
 import FAQSection from './FAQSection';
 import Footer from './Footer';
 import BlogSection from './BlogSection';
-import AboutUsSection from './AboutusSection';
+import TeamSection from './TeamSection';
+import CarouselSection from './CarouselSection';
 
 
 export default function Container() {
@@ -18,9 +19,10 @@ export default function Container() {
       {/* <ServicesSection /> */}
       <div className="bg-white">
       <ServicesSection />
+      <CarouselSection />
       </div>
       <div className="bg-gray-200">
-      <AboutUsSection />
+      <TeamSection />
       <BlogSection />
       <FAQSection />
       </div>

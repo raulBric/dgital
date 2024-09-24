@@ -6,6 +6,10 @@
   border-radius: 25% 75% 25% 75% / 100% 0% 100% 0% 
   ;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 .btn-custom {
   @apply bg-white text-blue-900 font-bold rounded-full transition-all duration-300 ease-in-out shadow-md relative;

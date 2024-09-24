@@ -4,12 +4,12 @@ const FAQSection = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-6xl font-extrabold text-gray-800 text-center m-12">FAQS</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
         {/* Columna 1 */}
         <div className="space-y-4">
           <div className="collapse collapse-arrow bg-base-200">
             <input type="checkbox" className="peer" />
-            <div className="collapse-title text-2xl font-medium text-gray-800">
+            <div className="collapse-title text-xl font-medium text-gray-800">
               ¿Qué es React y por qué debería usarlo?
             </div>
             <div className="collapse-content ">
@@ -20,7 +20,7 @@ const FAQSection = () => {
           </div>
           <div className="collapse collapse-arrow bg-base-200">
             <input type="checkbox" className="peer" />
-            <div className="collapse-title text-2xl font-medium text-gray-800">
+            <div className="collapse-title text-xl font-medium text-gray-800">
               ¿Cómo puedo empezar con Tailwind CSS?
             </div>
             <div className="collapse-content">
@@ -31,7 +31,7 @@ const FAQSection = () => {
           </div>
           <div className="collapse collapse-arrow bg-base-200">
             <input type="checkbox" className="peer" />
-            <div className="collapse-title text-2xl font-medium text-gray-800">
+            <div className="collapse-title text-xl font-medium text-gray-800">
               ¿Qué es DaisyUI y cómo se integra con Tailwind?
             </div>
             <div className="collapse-content">
@@ -46,7 +46,7 @@ const FAQSection = () => {
         <div className="space-y-4">
           <div className="collapse collapse-arrow bg-base-200">
             <input type="checkbox" className="peer" />
-            <div className="collapse-title text-2xl font-medium text-gray-800">
+            <div className="collapse-title text-xl font-medium text-gray-800">
               ¿Cómo puedo crear componentes reutilizables en React?
             </div>
             <div className="collapse-content">
@@ -57,7 +57,7 @@ const FAQSection = () => {
           </div>
           <div className="collapse collapse-arrow bg-base-200">
             <input type="checkbox" className="peer" />
-            <div className="collapse-title text-2xl font-medium text-gray-800">
+            <div className="collapse-title text-xl font-medium text-gray-800">
               ¿Cuál es la diferencia entre Tailwind CSS y Bootstrap?
             </div>
             <div className="collapse-content">
@@ -68,7 +68,7 @@ const FAQSection = () => {
           </div>
           <div className="collapse collapse-arrow bg-base-200">
             <input type="checkbox" className="peer" />
-            <div className="collapse-title text-2xl font-medium text-gray-800">
+            <div className="collapse-title text-xl font-medium text-gray-800">
               ¿Qué ventajas ofrece DaisyUI?
             </div>
             <div className="collapse-content">

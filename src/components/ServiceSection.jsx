@@ -35,9 +35,9 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 ">
+    <section id="services" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-800 to-gray-700">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-6xl font-extrabold text-gray-800 text-center m-12">Nuestros Servicios</h2>
+        <h2 className="text-6xl font-extrabold text-white text-center m-12">Nuestros Servicios</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {services.map((service) => (
             <div
@@ -45,13 +45,13 @@ export default function ServicesSection() {
               className="transform transition-all duration-300 ease-out hover:scale-105 hover:opacity-100"
             >
                 
-              <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transition duration-300 transform hover:scale-105 hover:shadow-xl border border-gray-700 hover:bg-gray-700 group">
+              <div className=" bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg shadow-lg overflow-hidden transition duration-300 transform hover:scale-105 hover:shadow-xl border border-gray-700 hover:bg-gray-700 group">
                 <div className="p-6">
-                  <service.icon className="h-12 w-12 text-blue-400 mb-4 transition-colors duration-300 group-hover:text-blue-300" />
+                  <service.icon className="h-12 w-12 text-blue-600 mb-4 transition-colors duration-300 group-hover:text-blue-300" />
                   <h3 className="text-xl font-semibold text-white mb-2 transition-colors duration-300 group-hover:text-blue-300">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 transition-colors duration-300 group-hover:text-white">
+                  <p className="text-white transition-colors duration-300 group-hover:text-white">
                     {service.description}
                   </p>
                 </div>
