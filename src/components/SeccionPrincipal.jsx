@@ -43,13 +43,13 @@ const SeccionPrincipal = () => {
   };
 
   return (
-    <div>
+    <div className=" rounded-br-3xl">
       <h1 className="text-center  font-bold text-4xl mt-8 ">Nuestros servicios</h1>
       <div className="cards-container grid grid-cols-1 lg:grid-cols-2 gap-4 p-8 place-items-center">
         {cardsData.map((card, index) => (
           <div
             key={index}
-            className="relative w-full sm:max-w-md lg:max-w-xl bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 rounder-bl-[100rem]"
+            className="relative w-full sm:max-w-md lg:max-w-xl bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 "
           >
             <Image
               src={card.imageUrl}

@@ -1,6 +1,6 @@
 const CustomCard = ({ title, description, imageUrl, buttonText, onClick }) => {
     return (
-      <div className="custom-card rounded-bl-[300rem]">
+      <div className="custom-card rounded-br-[1000px]">
         <img src={imageUrl} alt={title} className="card-image" />
         <div className="card-content">
           <h3 className="card-title">{title}</h3>
