@@ -1,4 +1,5 @@
 import { Monitor, Megaphone, Cpu, Brain, Presentation, Cog } from "lucide-react";
+import Link from "next/link";
 
 export default function ServicesSection() {
   const services = [
@@ -56,9 +57,9 @@ export default function ServicesSection() {
                   </p>
                 </div>
                 <div className="px-6 py-4 bg-gray-900 transition-colors duration-300 group-hover:bg-gray-800">
-                  <a href="#" className="text-blue-400 font-medium transition-colors duration-300 group-hover:text-blue-300">
-                    Saber más &rarr;
-                  </a>
+                <Link href="/servicios" className="text-blue-400 font-medium transition-colors duration-300 group-hover:text-blue-300">
+                Saber más &rarr;
+                </Link>
                 </div>
               </div>
             </div>

@@ -52,8 +52,8 @@ export default function HeroSection() {
             </motion.a>
           </div>
         </div>
-        <div className="mt-12 lg:mt-0 lg:w-1/2">
-          <div className="bg-black bg-opacity-50 rounded-lg p-4 backdrop-blur-sm">
+        <div className="mt-12 lg:mt-0 lg:w-1/2 ">
+          <div className="bg-black bg-opacity-50 rounded-lg p-4 backdrop-blur-sm h-72 sm:**">
             <div className="flex items-center space-x-2 text-sm mb-2">
               <div className="w-3 h-3 rounded-full bg-red-500" />
               <div className="w-3 h-3 rounded-full bg-yellow-500" />
