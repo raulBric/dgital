@@ -7,31 +7,37 @@ export default function ServicesSection() {
       title: "Diseño Web",
       description: "Creamos sitios web atractivos y funcionales que representan tu marca.",
       icon: Monitor,
+      link: "/servicios",
     },
     {
       title: "Marketing Digital",
       description: "Estrategias efectivas para aumentar tu presencia online y atraer clientes.",
       icon: Megaphone,
+      link: "/marketingdigital",
     },
     {
       title: "Consultoría Digital",
       description: "Estrategias digitales que impulsan tu negocio en el entorno digital.",
       icon: Cog,
+      link: "/consultoria-digital",
     },
     {
         title: "Diseño IoT",
         description: "Soluciones innovadoras que conectan tu negocio con el Internet de las Cosas.",
         icon: Cpu,
+        link: "/iot-desarrollo",
       },
       {
         title: "Soluciones de IA",
         description: "Impulsa tu negocio con inteligencia artificial aplicada y automatización avanzada.",
         icon: Brain,
+        link: "/soluciones-ia",
       },      
     {
     title: "Mentoría Digital",
     description: "Guiamos tu proyecto hacia el éxito con estrategias personalizadas.",
     icon: Presentation,
+    link: "/mentoria-digital",
     }
   ];
 
@@ -57,7 +63,7 @@ export default function ServicesSection() {
                   </p>
                 </div>
                 <div className="px-6 py-4 bg-gray-900 transition-colors duration-300 group-hover:bg-gray-800">
-                <Link href="/servicios" className="text-blue-400 font-medium transition-colors duration-300 group-hover:text-blue-300">
+                <Link href={service.link} className="text-blue-400 font-medium transition-colors duration-300 group-hover:text-blue-300">
                 Saber más &rarr;
                 </Link>
                 </div>

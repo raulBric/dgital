@@ -1,35 +1,44 @@
-import { Palette, Code, Smartphone, Zap } from "lucide-react";
+import { TrendingUp, Code, Smartphone, BarChart } from "lucide-react";
 import Head from "next/head";
 import Link from "next/link";
 
-export default function WebDesignService() {
+export default function DigitalMarketingService() {
   return (
     <div className="flex flex-col min-h-screen">
       <Head>
-        <title>Servicios de Diseño Web - Dgital</title>
-        <meta name="description" content="Transformamos tus ideas en sitios web impresionantes con diseño web personalizado y responsive." />
+        <title>Servicios de Marketing Digital - Dgital</title>
+        <meta
+          name="description"
+          content="Potencia tu presencia en línea con nuestras estrategias de marketing digital, SEO, gestión de redes sociales y campañas publicitarias."
+        />
       </Head>
 
       {/* Main content */}
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-blue-600 to-blue-400">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-purple-600 to-blue-400">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
-                  Diseño Web Creativo y Profesional
+                  Estrategias de Marketing Digital Efectivas
                 </h1>
                 <p className="mx-auto max-w-[700px] text-blue-100 md:text-xl">
-                  Transformamos tus ideas en sitios web impresionantes. Diseño personalizado, responsive y optimizado para el éxito de tu negocio.
+                  Potencia tu marca y aumenta tu presencia en línea con nuestras soluciones personalizadas de marketing digital.
                 </p>
               </div>
               <div className="space-x-4">
-                <a href="#" className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50">
-                  Solicitar Cotización
+                <a
+                  href="#"
+                  className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50"
+                >
+                  Solicitar Estrategia
                 </a>
-                <a href="#" className="inline-block px-6 py-3 border border-white text-white font-medium rounded-md hover:bg-white hover:text-blue-600">
-                  Ver Portafolio
+                <a
+                  href="#"
+                  className="inline-block px-6 py-3 border border-white text-white font-medium rounded-md hover:bg-white hover:text-blue-600"
+                >
+                  Ver Casos de Éxito
                 </a>
               </div>
             </div>
@@ -45,34 +54,34 @@ export default function WebDesignService() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {/* Service Card 1 */}
               <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-                <Palette className="h-6 w-6 mb-2 text-blue-600 mx-auto" />
-                <h3 className="text-blue-900 text-xl font-semibold mb-2">Diseño Personalizado</h3>
+                <TrendingUp className="h-6 w-6 mb-2 text-blue-600 mx-auto" />
+                <h3 className="text-blue-900 text-xl font-semibold mb-2">SEO & Optimización</h3>
                 <p className="text-blue-800">
-                  Creamos diseños únicos que reflejan la identidad de tu marca y cautivan a tu audiencia.
+                  Mejora la visibilidad de tu sitio web en los motores de búsqueda para atraer más tráfico orgánico.
                 </p>
               </div>
               {/* Service Card 2 */}
               <div className="bg-white p-6 rounded-lg shadow-lg text-center">
                 <Smartphone className="h-6 w-6 mb-2 text-blue-600 mx-auto" />
-                <h3 className="text-blue-900 text-xl font-semibold mb-2">Diseño Responsive</h3>
+                <h3 className="text-blue-900 text-xl font-semibold mb-2">Gestión de Redes Sociales</h3>
                 <p className="text-blue-800">
-                  Aseguramos que tu sitio se vea y funcione perfectamente en todos los dispositivos.
+                  Conecta con tu audiencia en las plataformas más populares y aumenta el engagement de tu marca.
                 </p>
               </div>
               {/* Service Card 3 */}
               <div className="bg-white p-6 rounded-lg shadow-lg text-center">
                 <Code className="h-6 w-6 mb-2 text-blue-600 mx-auto" />
-                <h3 className="text-blue-900 text-xl font-semibold mb-2">Desarrollo Web</h3>
+                <h3 className="text-blue-900 text-xl font-semibold mb-2">Campañas PPC</h3>
                 <p className="text-blue-800">
-                  Implementamos tu diseño con código limpio y eficiente para un rendimiento óptimo.
+                  Desarrollamos y gestionamos campañas publicitarias de pago por clic para maximizar tus conversiones.
                 </p>
               </div>
               {/* Service Card 4 */}
               <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-                <Zap className="h-6 w-6 mb-2 text-blue-600 mx-auto" />
-                <h3 className="text-blue-900 text-xl font-semibold mb-2">Optimización SEO</h3>
+                <BarChart className="h-6 w-6 mb-2 text-blue-600 mx-auto" />
+                <h3 className="text-blue-900 text-xl font-semibold mb-2">Análisis y Reporting</h3>
                 <p className="text-blue-800">
-                  Mejoramos la visibilidad de tu sitio en los motores de búsqueda para atraer más tráfico.
+                  Monitoreamos el rendimiento de tus campañas y te ofrecemos reportes detallados para ajustar la estrategia.
                 </p>
               </div>
             </div>
@@ -85,13 +94,16 @@ export default function WebDesignService() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
-                  ¿Listo para impulsar tu presencia en línea?
+                  ¿Listo para escalar tu estrategia digital?
                 </h2>
                 <p className="mx-auto max-w-[700px] text-blue-100 md:text-xl">
-                  Contáctanos hoy para una consulta gratuita y descubre cómo podemos llevar tu negocio al siguiente nivel.
+                  Contáctanos hoy para una consulta gratuita y descubre cómo podemos llevar tu negocio al siguiente nivel con estrategias de marketing digital.
                 </p>
               </div>
-              <a href="#" className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50">
+              <a
+                href="#"
+                className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50"
+              >
                 Contactar Ahora
               </a>
             </div>
