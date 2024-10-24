@@ -83,7 +83,7 @@ export default function Modal() {
                   id="nombre"
                   name="nombre"
                   placeholder="Tu nombre"
-                  className="input input-bordered w-full"
+                  className="input input-bordered w-full text-black"
                   value={formData.nombre}
                   onChange={handleChange}
                   required
@@ -100,7 +100,7 @@ export default function Modal() {
                   id="apellidos"
                   name="apellidos"
                   placeholder="Tus apellidos"
-                  className="input input-bordered w-full"
+                  className="input input-bordered w-full text-black"
                   value={formData.apellidos}
                   onChange={handleChange}
                   required
@@ -117,7 +117,7 @@ export default function Modal() {
                   id="email"
                   name="email"
                   placeholder="ejemplo@correo.com"
-                  className="input input-bordered w-full"
+                  className="input input-bordered w-full text-black"
                   value={formData.email}
                   onChange={handleChange}
                   required
