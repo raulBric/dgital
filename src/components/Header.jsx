@@ -57,7 +57,7 @@ export default function Header() {
 
         {/* Modal y Selector de Idioma en todas las pantallas */}
         <div className="flex items-center space-x-4">
-          <LanguageSelector />  {/* Selector de idioma */}
+          {/* <LanguageSelector />  Selector de idioma */}
           <Modal /> {/* Modal de contacto */}
         </div>
 

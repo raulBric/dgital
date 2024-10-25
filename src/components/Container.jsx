@@ -22,8 +22,8 @@ export default function Container() {
       <CarouselSection />
       </div>
       <div className="bg-gray-200">
-      <TeamSection />
-      <BlogSection />
+      {/* <TeamSection />
+      <BlogSection /> */}
       <FAQSection />
       </div>
       {/* <AccordionSection /> */}
