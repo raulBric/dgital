@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link'; 
+import Link from 'next/link';
 import Logo from '@/assets/logo-white-svg.svg';
-import LanguageSelector from '@/components/LanguageSelector'; // Importamos el selector de idioma
+import LanguageSelector from '@/components/LanguageSelector';
 import { Menu, X } from 'lucide-react';
-import Modal from '@/components/Modal'; // Importamos el Modal
+import Modal from '@/components/Modal';
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -14,13 +14,8 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsSticky(window.scrollY > 0);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -41,50 +36,51 @@ export default function Header() {
 
         {/* Menú de Navegación en pantallas grandes */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#servicios" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          <Link href="#servicios" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Servicios
-          </a>
-          <a href="#portafolio" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          </Link>
+          <Link href="#portafolio" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Portafolio
-          </a>
-          <a href="#sobre-nosotros" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          </Link>
+          <Link href="#sobre-nosotros" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Sobre Nosotros
-          </a>
-          <a href="#contacto" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          </Link>
+          <Link href="#contacto" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Contacto
-          </a>
+          </Link>
         </nav>
 
         {/* Modal y Selector de Idioma en todas las pantallas */}
         <div className="flex items-center space-x-4">
-          {/* <LanguageSelector />  Selector de idioma */}
+          {/* <LanguageSelector /> Selector de idioma */}
           <Modal /> {/* Modal de contacto */}
         </div>
 
-        {/* Menú hamburguesa visible solo en móviles */}
+        {/* Menú hamburguesa visible solo en móviles con tamaño ajustado */}
         <button 
-          className="md:hidden p-2 hover:bg-gray-700 rounded-full transition duration-300"
+          className="md:hidden p-1 w-8 h-8 rounded-full transition duration-300 hover:bg-gray-700"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Abrir menú de navegación"
         >
-          {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {/* Menú móvil */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-gray-900 text-white py-4 space-y-2 px-4 shadow-lg transition duration-300">
-          <a href="#servicios" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          <Link href="#servicios" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Servicios
-          </a>
-          <a href="#portafolio" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          </Link>
+          <Link href="#portafolio" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Portafolio
-          </a>
-          <a href="#sobre-nosotros" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          </Link>
+          <Link href="#sobre-nosotros" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Sobre Nosotros
-          </a>
-          <a href="#contacto" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          </Link>
+          <Link href="#contacto" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Contacto
-          </a>
+          </Link>
 
           {/* Selector de idioma también accesible en móviles */}
           <div className="mt-4">
@@ -95,6 +91,7 @@ export default function Header() {
     </header>
   );
 }
+
 
 
 

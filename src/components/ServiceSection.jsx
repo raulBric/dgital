@@ -44,7 +44,7 @@ export default function ServicesSection() {
   return (
     <section id="services" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-800 to-gray-700">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-6xl font-extrabold text-white text-center m-12">Nuestros Servicios</h2>
+        <h2 className="text-4xl font-extrabold text-white text-center m-12">Nuestros Servicios</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {services.map((service) => (
             <div

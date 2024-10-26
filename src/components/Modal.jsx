@@ -40,11 +40,9 @@ export default function Modal() {
       }
 
       const data = await res.json();
-      console.log('Respuesta del servidor:', data);
-
       alert('Mensaje enviado con éxito');
-      setIsOpen(false); // Cierra el modal después de enviar
-      setFormData({ nombre: '', apellidos: '', email: '', mensaje: '' }); // Limpiar el formulario
+      setIsOpen(false);
+      setFormData({ nombre: '', apellidos: '', email: '', mensaje: '' });
     } catch (error) {
       console.error('Error al enviar el mensaje:', error);
       alert('Error al enviar el mensaje. Revisa la consola para más detalles.');
@@ -53,37 +51,37 @@ export default function Modal() {
 
   return (
     <>
-      <button className="btn btn-primary" onClick={openModal}>
-        Contacta con nosotros
+      <button className="btn btn-primary text-sm py-2" onClick={openModal}>
+        Contacto
       </button>
 
       {isOpen && (
-        <div className="modal modal-open flex justify-center items-center">
-          <div className="modal-box relative max-w-lg w-full">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white rounded-lg p-4 w-full max-w-md mx-auto overflow-auto max-h-[90vh] relative">
             <button
-              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 focus:outline-none"
               onClick={closeModal}
             >
               ✕
             </button>
-            <h3 className="font-bold text-2xl text-center text-gray-900">
+            <h3 className="font-bold text-lg sm:text-xl text-center text-gray-900">
               Formulario de contacto
             </h3>
-            <p className="py-4 text-center text-gray-600">
+            <p className="py-2 text-center text-gray-600 text-sm sm:text-base">
               Déjanos un mensaje y nos pondremos en contacto contigo lo antes posible.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3">
               <div className="form-control">
                 <label className="label" htmlFor="nombre">
-                  <span className="label-text">Nombre</span>
+                  <span className="label-text text-sm">Nombre</span>
                 </label>
                 <input
                   type="text"
                   id="nombre"
                   name="nombre"
                   placeholder="Tu nombre"
-                  className="input input-bordered w-full text-black"
+                  className="input input-bordered w-full text-black text-sm"
                   value={formData.nombre}
                   onChange={handleChange}
                   required
@@ -93,14 +91,14 @@ export default function Modal() {
 
               <div className="form-control">
                 <label className="label" htmlFor="apellidos">
-                  <span className="label-text">Apellidos</span>
+                  <span className="label-text text-sm">Apellidos</span>
                 </label>
                 <input
                   type="text"
                   id="apellidos"
                   name="apellidos"
                   placeholder="Tus apellidos"
-                  className="input input-bordered w-full text-black"
+                  className="input input-bordered w-full text-black text-sm"
                   value={formData.apellidos}
                   onChange={handleChange}
                   required
@@ -110,14 +108,14 @@ export default function Modal() {
 
               <div className="form-control">
                 <label className="label" htmlFor="email">
-                  <span className="label-text">Correo electrónico</span>
+                  <span className="label-text text-sm">Correo electrónico</span>
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   placeholder="ejemplo@correo.com"
-                  className="input input-bordered w-full text-black"
+                  className="input input-bordered w-full text-black text-sm"
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -127,14 +125,14 @@ export default function Modal() {
 
               <div className="form-control">
                 <label className="label" htmlFor="mensaje">
-                  <span className="label-text">Mensaje</span>
+                  <span className="label-text text-sm">Mensaje</span>
                 </label>
                 <textarea
                   id="mensaje"
                   name="mensaje"
                   placeholder="Escribe tu mensaje"
-                  className="textarea textarea-bordered w-full text-gray-700"
-                  rows="4"
+                  className="textarea textarea-bordered w-full text-gray-700 text-sm"
+                  rows="3"
                   value={formData.mensaje}
                   onChange={handleChange}
                   required
@@ -142,7 +140,7 @@ export default function Modal() {
                 ></textarea>
               </div>
 
-              <button className="btn btn-block btn-primary" type="submit">
+              <button className="btn btn-block btn-primary text-sm py-2" type="submit">
                 Enviar
               </button>
             </form>
@@ -152,4 +150,6 @@ export default function Modal() {
     </>
   );
 }
+
+
 

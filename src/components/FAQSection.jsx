@@ -3,7 +3,7 @@ import React from "react";
 const FAQSection = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-6xl font-extrabold text-gray-800 text-center m-12">FAQS</h2>
+      <h2 className="text-4xl font-extrabold text-gray-800 text-center m-12">FAQS</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
         {/* Columna 1 */}
         <div className="space-y-4">
