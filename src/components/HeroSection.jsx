@@ -1,8 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { ChevronRight, Code, Users } from 'lucide-react'
+import { Mail } from "lucide-react"
 
 export default function HeroSection() {
   const [text, setText] = useState('');
@@ -32,20 +31,20 @@ export default function HeroSection() {
             Empowering businesses with cutting-edge solutions. Our team of expert developers turns your ideas into reality.
           </p>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 items-center">
-          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:max-w-lg">
-  <input
-    type="text"
-    placeholder="Correo electrónico"
-    className="w-full border border-gray-300 rounded-3xl p-2 sm:p-4 pl-4 pr-4 text-gray-700 focus:outline-none focus:border-blue-500"
-  />
-  <button className="hidden sm:block bg-blue-500 text-white font-semibold py-4 px-6 rounded-3xl hover:bg-blue-600">
-    ¿Hablamos?
-  </button>
-</div>
-<button className="sm:hidden w-full bg-blue-500 text-white font-semibold h-10 px-4 rounded-3xl hover:bg-blue-600">
-  Empieza tu proyecto
-</button>
-
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:max-w-lg relative">
+      <Mail className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+      <input
+        type="email"
+        placeholder="Correo electrónico"
+        className="w-full border border-gray-300 rounded-3xl p-2 sm:p-4 pl-10 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500"
+      />
+      <button className="hidden sm:block bg-blue-500 text-white font-semibold py-2 sm:py-4 px-4 sm:px-6 rounded-3xl hover:bg-blue-600">
+        ¿Hablamos?
+      </button>
+    </div>
+    <button className="sm:hidden w-full bg-blue-500 text-white font-semibold h-10 px-4 rounded-3xl hover:bg-blue-600">
+      Empieza tu proyecto
+    </button>
 </div>
         </div>
         <div className="mt-8 sm:mt-12 lg:mt-0 lg:w-1/2">
