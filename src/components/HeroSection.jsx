@@ -31,23 +31,21 @@ export default function HeroSection() {
           <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl">
             Empowering businesses with cutting-edge solutions. Our team of expert developers turns your ideas into reality.
           </p>
-          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="#contact"
-              className="inline-flex items-center justify-center px-5 py-2 sm:px-6 sm:py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
-              Get Started
-              <ChevronRight className="ml-2 -mr-1 h-5 w-5" />
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="#services"
-              className="inline-flex items-center justify-center px-5 py-2 sm:px-6 sm:py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50">
-              Our Services
-            </motion.a>
-          </div>
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 items-center">
+          <div className="relative w-full sm:max-w-lg">
+  <input
+    type="text"
+    placeholder="Correo electrónico"
+    className="w-full border border-gray-300 rounded-3xl p-4 pl-4 pr-28 text-gray-700 focus:outline-none focus:border-blue-500"
+  />
+  <button className="hidden sm:block absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white font-semibold py-3 px-4 rounded-3xl hover:bg-blue-600">
+    ¿Hablamos?
+  </button>
+</div>
+<button className="sm:hidden w-full bg-blue-500 text-white font-semibold py-4 px-4 rounded-3xl hover:bg-blue-600">
+  Empieza tu proyecto
+</button>
+</div>
         </div>
         <div className="mt-8 sm:mt-12 lg:mt-0 lg:w-1/2">
           <div className="bg-black bg-opacity-50 rounded-lg p-3 sm:p-4 backdrop-blur-sm h-32 sm:h-72">
