@@ -32,19 +32,20 @@ export default function HeroSection() {
             Empowering businesses with cutting-edge solutions. Our team of expert developers turns your ideas into reality.
           </p>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 items-center">
-          <div className="relative w-full sm:max-w-lg">
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:max-w-lg">
   <input
     type="text"
     placeholder="Correo electrónico"
-    className="w-full border border-gray-300 rounded-3xl p-4 pl-4 pr-28 text-gray-700 focus:outline-none focus:border-blue-500"
+    className="w-full border border-gray-300 rounded-3xl p-2 sm:p-4 pl-4 pr-4 text-gray-700 focus:outline-none focus:border-blue-500"
   />
-  <button className="hidden sm:block absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white font-semibold py-3 px-4 rounded-3xl hover:bg-blue-600">
+  <button className="hidden sm:block bg-blue-500 text-white font-semibold py-4 px-6 rounded-3xl hover:bg-blue-600">
     ¿Hablamos?
   </button>
 </div>
-<button className="sm:hidden w-full bg-blue-500 text-white font-semibold py-4 px-4 rounded-3xl hover:bg-blue-600">
+<button className="sm:hidden w-full bg-blue-500 text-white font-semibold h-10 px-4 rounded-3xl hover:bg-blue-600">
   Empieza tu proyecto
 </button>
+
 </div>
         </div>
         <div className="mt-8 sm:mt-12 lg:mt-0 lg:w-1/2">
