@@ -24,25 +24,25 @@ export default function HeroSection() {
       <div className="relative container mx-auto px-4 py-10 sm:py-20 lg:py-24 lg:flex lg:items-center">
         <div className="lg:w-1/2">
           <h1 className="text-4xl sm:text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
-            We Build the Future of{' '}
-            <span className="text-blue-500">Software</span>
+          Potencia tu Negocio con Soluciones{' '}
+            <span className="text-blue-500">Digitales</span>
           </h1>
           <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl">
-            Empowering businesses with cutting-edge solutions. Our team of expert developers turns your ideas into reality.
+          Empoderamos a las empresas con soluciones innovadoras. Nuestro equipo de expertos convierte tus ideas en realidad.
           </p>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 items-center">
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:max-w-lg relative">
-      <Mail className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+      <Mail className="absolute left-4 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
       <input
         type="email"
         placeholder="Correo electrónico"
-        className="w-full border border-gray-300 rounded-3xl p-3 sm:p-4 pl-10 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500"
+        className="w-full border border-gray-300 rounded-3xl p-3 sm:p-4 pl-12 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500"
       />
       <button className="hidden sm:block bg-blue-500 text-white font-semibold py-2 sm:py-4 px-4 sm:px-6 rounded-3xl hover:bg-blue-600">
         ¿Hablamos?
       </button>
     </div>
-    <button className="sm:hidden w-full bg-blue-500 text-white font-semibold h-10 px-4 py-3 rounded-3xl hover:bg-blue-600">
+    <button className="sm:hidden w-full bg-blue-500 text-white font-semibold py-3 px-4 rounded-3xl hover:bg-blue-600">
       Empieza tu proyecto
     </button>
 </div>

@@ -28,30 +28,30 @@ export default function Header() {
           <Image 
             src={Logo}
             alt="Logo"
-            width={150}
-            height={150}
+            width={200}
+            height={200}
             className="m-2"
           />
         </Link>
 
         {/* Menú de Navegación en pantallas grandes */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="#servicios" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          <Link href="#servicios" className="text-lg font-medium hover:text-blue-400 transition duration-300 ">
             Servicios
           </Link>
-          <Link href="#portafolio" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          {/* <Link href="#portafolio" className="text-lg font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Portafolio
-          </Link>
-          <Link href="#sobre-nosotros" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          </Link> */}
+          <Link href="#sobre-nosotros" className="text-lg font-medium hover:text-blue-400 transition duration-300 ">
             Sobre Nosotros
           </Link>
-          <Link href="#contacto" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          {/* <Link href="#contacto" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Contacto
-          </Link>
+          </Link> */}
         </nav>
 
         {/* Modal y Selector de Idioma en todas las pantallas */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center ">
           {/* <LanguageSelector /> Selector de idioma */}
           <Modal /> {/* Modal de contacto */}
         </div>
@@ -68,24 +68,24 @@ export default function Header() {
 
       {/* Menú móvil */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-900 text-white py-4 space-y-2 px-4 shadow-lg transition duration-300">
-          <Link href="#servicios" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+        <div className="md:hidden bg-gray-800 text-white py-4 space-y-2 px-4 shadow-lg transition duration-300">
+          <Link href="#servicios" className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
             Servicios
           </Link>
-          <Link href="#portafolio" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          {/* <Link href="#portafolio" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Portafolio
-          </Link>
-          <Link href="#sobre-nosotros" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          </Link> */}
+          <Link href="#sobre-nosotros" className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
             Sobre Nosotros
           </Link>
-          <Link href="#contacto" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
+          <Link href="#contacto" className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
             Contacto
           </Link>
 
           {/* Selector de idioma también accesible en móviles */}
-          <div className="mt-4">
+          {/* <div className="mt-4">
             <LanguageSelector />
-          </div>
+          </div> */}
         </div>
       )}
     </header>
