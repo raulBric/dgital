@@ -36,9 +36,9 @@ export default function HeroSection() {
       <input
         type="email"
         placeholder="Correo electrónico"
-        className="w-full border border-gray-300 rounded-3xl p-2 sm:p-4 pl-10 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500"
+        className="w-full border border-gray-300 rounded-3xl p-3 sm:p-4 pl-10 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500"
       />
-      <button className="hidden sm:block bg-blue-500 text-white font-semibold py-2 sm:py-4 px-4 sm:px-6 rounded-3xl hover:bg-blue-600">
+      <button className="hidden sm:block bg-blue-500 text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-3xl hover:bg-blue-600">
         ¿Hablamos?
       </button>
     </div>
