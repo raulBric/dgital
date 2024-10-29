@@ -28,7 +28,10 @@ export default function HeroSection() {
             <span className="text-blue-500">Digitales</span>
           </h1>
           <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl">
-          Empoderamos a las empresas con soluciones innovadoras. Nuestro equipo de expertos convierte tus ideas en realidad.
+          Empoderamos a las empresas con soluciones innovadoras.{' '} 
+          </p>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl">
+          Nuestro equipo de expertos convierte tus ideas en realidad.{' '}
           </p>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 items-center">
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:max-w-lg relative">
