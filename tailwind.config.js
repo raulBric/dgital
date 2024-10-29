@@ -17,6 +17,5 @@ module.exports = {
   plugins: [require('daisyui'), require("tailwindcss-animate")],
   daisyui:{
 		darkTheme: "dark",
-		utils	: true,
   }
 }
