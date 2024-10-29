@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useDarkMode } from '@/context/Mycontext'; // Importa el contexto
 
 export default function Modal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +10,6 @@ export default function Modal() {
     email: '',
     mensaje: '',
   });
-
-  const isDarkMode = useDarkMode(); // Usa el contexto para obtener el modo oscuro
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
@@ -61,8 +58,8 @@ export default function Modal() {
       </button>
 
       {isOpen && (
-        <div className={`fixed inset-0 flex items-center justify-center z-50 ${isDarkMode ? 'bg-black bg-opacity-80' : 'bg-black bg-opacity-50'}`}>
-          <div className={`rounded-lg p-4 w-full max-w-md mx-auto overflow-auto max-h-[90vh] relative ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+          <div className="rounded-lg p-4 w-full max-w-md mx-auto overflow-auto max-h-[90vh] relative bg-white text-black">
             <button
               className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 focus:outline-none"
               onClick={closeModal}
@@ -86,7 +83,7 @@ export default function Modal() {
                   id="nombre"
                   name="nombre"
                   placeholder="Tu nombre"
-                  className={`input input-bordered w-full text-sm ${isDarkMode ? 'text-white bg-gray-800 border-gray-700' : 'text-black bg-white border-gray-300'}`}
+                  className="input input-bordered w-full text-sm text-black bg-white border-gray-300"
                   value={formData.nombre}
                   onChange={handleChange}
                   required
@@ -103,7 +100,7 @@ export default function Modal() {
                   id="apellidos"
                   name="apellidos"
                   placeholder="Tus apellidos"
-                  className={`input input-bordered w-full text-sm ${isDarkMode ? 'text-white bg-gray-800 border-gray-700' : 'text-black bg-white border-gray-300'}`}
+                  className="input input-bordered w-full text-sm text-black bg-white border-gray-300"
                   value={formData.apellidos}
                   onChange={handleChange}
                   required
@@ -120,7 +117,7 @@ export default function Modal() {
                   id="email"
                   name="email"
                   placeholder="ejemplo@correo.com"
-                  className={`input input-bordered w-full text-sm ${isDarkMode ? 'text-white bg-gray-800 border-gray-700' : 'text-black bg-white border-gray-300'}`}
+                  className="input input-bordered w-full text-sm text-black bg-white border-gray-300"
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -136,7 +133,7 @@ export default function Modal() {
                   id="mensaje"
                   name="mensaje"
                   placeholder="Escribe tu mensaje"
-                  className={`textarea textarea-bordered w-full text-sm ${isDarkMode ? 'text-white bg-gray-800 border-gray-700' : 'text-gray-700 bg-white border-gray-300'}`}
+                  className="textarea textarea-bordered w-full text-sm text-gray-700 bg-white border-gray-300"
                   rows="3"
                   value={formData.mensaje}
                   onChange={handleChange}
@@ -155,5 +152,3 @@ export default function Modal() {
     </>
   );
 }
-
-
