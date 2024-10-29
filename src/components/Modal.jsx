@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useDarkMode } from '@/context/Mycontext'; // Importa el contexto
 
 export default function Modal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +11,8 @@ export default function Modal() {
     email: '',
     mensaje: '',
   });
+
+  const isDarkMode = useDarkMode(); // Usa el contexto para obtener el modo oscuro
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
@@ -39,7 +42,6 @@ export default function Modal() {
         throw new Error(`Error en el servidor: ${errorText}`);
       }
 
-      const data = await res.json();
       alert('Mensaje enviado con éxito');
       setIsOpen(false);
       setFormData({ nombre: '', apellidos: '', email: '', mensaje: '' });
@@ -51,23 +53,26 @@ export default function Modal() {
 
   return (
     <>
-      <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" onClick={openModal}>
+      <button
+        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        onClick={openModal}
+      >
         Contacto
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white rounded-lg p-4 w-full max-w-md mx-auto overflow-auto max-h-[90vh] relative">
+        <div className={`fixed inset-0 flex items-center justify-center z-50 ${isDarkMode ? 'bg-black bg-opacity-80' : 'bg-black bg-opacity-50'}`}>
+          <div className={`rounded-lg p-4 w-full max-w-md mx-auto overflow-auto max-h-[90vh] relative ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
             <button
               className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 focus:outline-none"
               onClick={closeModal}
             >
               ✕
             </button>
-            <h3 className="font-bold text-lg sm:text-xl text-center text-gray-900">
+            <h3 className="font-bold text-lg sm:text-xl text-center">
               Formulario de contacto
             </h3>
-            <p className="py-2 text-center text-gray-600 text-sm sm:text-base">
+            <p className="py-2 text-center text-sm sm:text-base">
               Déjanos un mensaje y nos pondremos en contacto contigo lo antes posible.
             </p>
 
@@ -81,7 +86,7 @@ export default function Modal() {
                   id="nombre"
                   name="nombre"
                   placeholder="Tu nombre"
-                  className="input input-bordered w-full text-black text-sm"
+                  className={`input input-bordered w-full text-sm ${isDarkMode ? 'text-white bg-gray-800 border-gray-700' : 'text-black bg-white border-gray-300'}`}
                   value={formData.nombre}
                   onChange={handleChange}
                   required
@@ -98,7 +103,7 @@ export default function Modal() {
                   id="apellidos"
                   name="apellidos"
                   placeholder="Tus apellidos"
-                  className="input input-bordered w-full text-black text-sm"
+                  className={`input input-bordered w-full text-sm ${isDarkMode ? 'text-white bg-gray-800 border-gray-700' : 'text-black bg-white border-gray-300'}`}
                   value={formData.apellidos}
                   onChange={handleChange}
                   required
@@ -115,7 +120,7 @@ export default function Modal() {
                   id="email"
                   name="email"
                   placeholder="ejemplo@correo.com"
-                  className="input input-bordered w-full text-black text-sm"
+                  className={`input input-bordered w-full text-sm ${isDarkMode ? 'text-white bg-gray-800 border-gray-700' : 'text-black bg-white border-gray-300'}`}
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -131,7 +136,7 @@ export default function Modal() {
                   id="mensaje"
                   name="mensaje"
                   placeholder="Escribe tu mensaje"
-                  className="textarea textarea-bordered w-full text-gray-700 text-sm"
+                  className={`textarea textarea-bordered w-full text-sm ${isDarkMode ? 'text-white bg-gray-800 border-gray-700' : 'text-gray-700 bg-white border-gray-300'}`}
                   rows="3"
                   value={formData.mensaje}
                   onChange={handleChange}
@@ -150,6 +155,5 @@ export default function Modal() {
     </>
   );
 }
-
 
 
