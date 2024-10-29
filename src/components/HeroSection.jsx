@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from 'react'
-import { Mail } from "lucide-react"
+import { useState, useEffect } from 'react';
+import { Mail } from "lucide-react";
 
 export default function HeroSection() {
   const [text, setText] = useState('');
@@ -39,7 +39,7 @@ export default function HeroSection() {
       <input
         type="email"
         placeholder="Correo electrónico"
-        className="w-full border border-gray-300 rounded-3xl p-3 sm:p-4 pl-12 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500"
+        className="w-full border border-gray-300 rounded-3xl p-3 sm:p-4 pl-12 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:border-blue-400"
       />
       <button className="hidden sm:block bg-blue-500 text-white font-semibold py-2 sm:py-4 px-4 sm:px-6 rounded-3xl hover:bg-blue-600">
         ¿Hablamos?
@@ -64,16 +64,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      {/* <div className="absolute bottom-4 left-4 flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 text-gray-400 text-xs sm:text-sm">
-        <div className="flex items-center">
-          <Code className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
-          <span>10+ Years Experience</span>
-        </div>
-        <div className="flex items-center">
-          <Users className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
-          <span>100+ Satisfied Clients</span>
-        </div>
-      </div> */}
     </section>
   );
 }
