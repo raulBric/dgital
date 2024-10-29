@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark\:underline:where([data-mode="dark"], [data-mode="dark"] *){
+  text-decoration-line: underline
+}
 
 
 
