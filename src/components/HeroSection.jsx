@@ -42,12 +42,12 @@ export default function HeroSection() {
     className="w-full border border-gray-300 rounded-3xl p-3 sm:p-4 pl-12 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500 
                dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:border-blue-400"
   />
-  <button className="hidden sm:block bg-blue-500 text-white font-semibold py-2 sm:py-4 px-4 sm:px-6 rounded-3xl hover:bg-blue-600 
+  <button className="hidden sm:block bg-blue-600 text-white font-semibold py-2 sm:py-4 px-4 sm:px-6 rounded-3xl hover:bg-blue-700 
                    dark:bg-blue-600 dark:hover:bg-blue-700">
     ¿Hablamos?
   </button>
 </div>
-    <button className="sm:hidden w-full bg-blue-500 text-white font-semibold py-3 px-4 rounded-3xl hover:bg-blue-600">
+    <button className="sm:hidden w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-3xl hover:bg-blue-700">
       Empieza tu proyecto
     </button>
 </div>
