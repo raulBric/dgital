@@ -35,16 +35,18 @@ export default function HeroSection() {
           </p>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 items-center">
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:max-w-lg relative">
-      <Mail className="absolute left-4 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
-      <input
-        type="email"
-        placeholder="Correo electrónico"
-        className="w-full border border-gray-300 rounded-3xl p-3 sm:p-4 pl-12 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:border-blue-400"
-      />
-      <button className="hidden sm:block bg-blue-500 text-white font-semibold py-2 sm:py-4 px-4 sm:px-6 rounded-3xl hover:bg-blue-600">
-        ¿Hablamos?
-      </button>
-    </div>
+  <Mail className="absolute left-4 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" />
+  <input
+    type="email"
+    placeholder="Correo electrónico"
+    className="w-full border border-gray-300 rounded-3xl p-3 sm:p-4 pl-12 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500 
+               dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:border-blue-400"
+  />
+  <button className="hidden sm:block bg-blue-500 text-white font-semibold py-2 sm:py-4 px-4 sm:px-6 rounded-3xl hover:bg-blue-600 
+                   dark:bg-blue-600 dark:hover:bg-blue-700">
+    ¿Hablamos?
+  </button>
+</div>
     <button className="sm:hidden w-full bg-blue-500 text-white font-semibold py-3 px-4 rounded-3xl hover:bg-blue-600">
       Empieza tu proyecto
     </button>

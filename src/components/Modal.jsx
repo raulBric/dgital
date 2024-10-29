@@ -59,9 +59,9 @@ export default function Modal() {
 
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="rounded-lg p-4 w-full max-w-md mx-auto overflow-auto max-h-[90vh] relative bg-white text-black">
+          <div className="rounded-lg p-4 w-full max-w-md mx-auto overflow-auto max-h-[90vh] relative bg-white dark:bg-gray-800 text-black dark:text-white">
             <button
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 focus:outline-none"
+              className="absolute top-3 right-3 text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white focus:outline-none"
               onClick={closeModal}
             >
               ✕
@@ -83,7 +83,7 @@ export default function Modal() {
                   id="nombre"
                   name="nombre"
                   placeholder="Tu nombre"
-                  className="input input-bordered w-full text-sm text-black bg-white border-gray-300"
+                  className="input input-bordered w-full text-sm text-black dark:text-white bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                   value={formData.nombre}
                   onChange={handleChange}
                   required
@@ -100,7 +100,7 @@ export default function Modal() {
                   id="apellidos"
                   name="apellidos"
                   placeholder="Tus apellidos"
-                  className="input input-bordered w-full text-sm text-black bg-white border-gray-300"
+                  className="input input-bordered w-full text-sm text-black dark:text-white bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                   value={formData.apellidos}
                   onChange={handleChange}
                   required
@@ -117,7 +117,7 @@ export default function Modal() {
                   id="email"
                   name="email"
                   placeholder="ejemplo@correo.com"
-                  className="input input-bordered w-full text-sm text-black bg-white border-gray-300"
+                  className="input input-bordered w-full text-sm text-black dark:text-white bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -133,7 +133,7 @@ export default function Modal() {
                   id="mensaje"
                   name="mensaje"
                   placeholder="Escribe tu mensaje"
-                  className="textarea textarea-bordered w-full text-sm text-gray-700 bg-white border-gray-300"
+                  className="textarea textarea-bordered w-full text-sm text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                   rows="3"
                   value={formData.mensaje}
                   onChange={handleChange}
