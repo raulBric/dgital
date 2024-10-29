@@ -28,7 +28,7 @@ export default function HeroSection() {
             <span className="text-blue-500">Digitales</span>
           </h1>
           <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl">
-          empoderamos a las empresas con soluciones innovadoras.{' '} 
+          Empoderamos a las empresas con soluciones innovadoras.{' '} 
           </p>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl">
           Nuestro equipo de expertos convierte tus ideas en realidad.{' '}
