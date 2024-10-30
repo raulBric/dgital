@@ -23,44 +23,6 @@ export default function Contact() {
               Escríbenos a <a href="mailto:hola@dgital.io" className="text-blue-600 underline">hola@dgital.io</a>
             </p>
           </div>
-
-          <div className="mt-12 flex flex-col items-center">
-            <form className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-blue-900 font-semibold">Nombre</label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Tu nombre"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-blue-900 font-semibold">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Tu correo electrónico"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-blue-900 font-semibold">Mensaje</label>
-                <textarea
-                  id="message"
-                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Tu mensaje"
-                  rows="4"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700"
-              >
-                Enviar
-              </button>
-            </form>
-          </div>
         </div>
       </main>
     </div>
