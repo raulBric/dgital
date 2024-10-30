@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import Image from "next/image"; // Importa el componente Image de Next.js
 import Logo from "@/assets/logo-white-svg.svg"; // Importa el logo en formato SVG
@@ -5,6 +6,7 @@ import Twitter from "@/assets/x-twitter-brands-solid.svg"; // Importa el icono d
 import Youtube from "@/assets/youtube-brands-solid.svg"; // Importa el icono de Youtube
 import Linkedin from "@/assets/linkedin-brands-solid.svg"; // Importa el icono de LinkedIn
 import Discord from "@/assets/discord-brands-solid.svg"; // Importa el icono de Discord
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -29,66 +31,63 @@ const Footer = () => {
 
         {/* Sección de Servicios */}
         <nav className="flex flex-col items-center md:items-start text-center md:text-left space-y-2">
-          <h6 className="footer-title font-semibold">Services</h6>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <h6 className="footer-title font-semibold">Servicios</h6>
+          <Link href="/servicios" className="link link-hover">Diseño Web</Link>
+          <Link href="/marketingdigital" className="link link-hover">Marketing Digital</Link>
+          <Link href="/consultoria-digital" className="link link-hover">Consultoria Digital</Link>
+          <Link href="soluciones-ia" className="link link-hover">Inteligencia Artificial</Link>
         </nav>
 
         {/* Sección de la Compañía */}
         <nav className="flex flex-col items-center md:items-start text-center md:text-left space-y-2">
-          <h6 className="footer-title font-semibold">Company</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <h6 className="footer-title font-semibold">Compañia</h6>
+          <Link href="/quienes-somos" className="link link-hover">Sobre nosotros</Link>
+          <Link href="/contacto" className="link link-hover">Contacto</Link>
         </nav>
 
         {/* Sección Legal */}
         <nav className="flex flex-col items-center md:items-start text-center md:text-left space-y-2">
           <h6 className="footer-title font-semibold">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <Link href="/politica-privacidad" className="link link-hover">Pólitica de Privacidad</Link>
+          <Link href="/politica-cookies" className="link link-hover">Pólitica de Cookies</Link>
         </nav>
 
         {/* Sección de Redes Sociales */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-2">
           <h6 className="footer-title font-semibold">Follow Us</h6>
           <div className="flex justify-center md:justify-start space-x-4">
-            <a href="#" className="link link-hover">
+            <Link href="https://www.youtube.com/@dgital_io" className="link lintisementk-hover">
               <Image 
                 src={Youtube} // Reemplaza con la ruta de tu icono de Facebook
                 alt="Youtube" 
                 width={24} 
                 height={24}
               />
-            </a>
-            <a href="#" className="link link-hover">
+            </Link>
+            <Link href="https://twitter.com/dgital_io" className="link link-hover">
               <Image 
                 src={Twitter} // Reemplaza con la ruta de tu icono de Twitter
-                alt="X" 
+                alt="X" ie pol
                 width={24} 
                 height={24}
               />
-            </a>
-            <a href="#" className="link link-hover">
+            </Link>
+            <Link href="https://www.linkedin.com/company/dgital-io" className="link link-hover">
               <Image 
                 src={Linkedin} // Reemplaza con la ruta de tu icono de Instagram
                 alt="Linkedin" 
                 width={24} 
                 height={24}
               />
-            </a>
-            <a href="#" className="link link-hover">
+            </Link>
+            {/* <a href="#" className="link link-hover">
               <Image 
                 src={Discord} // Reemplaza con la ruta de tu icono de LinkedIn
                 alt="Discord" 
                 width={24} 
                 height={24}
               />
-            </a>
+            </a> */}
           </div>
         </div>
 
