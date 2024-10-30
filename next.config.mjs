@@ -10,7 +10,12 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; img-src 'self' https://dgital.io; script-src 'self' 'unsafe-inline'"
+            value: `
+              default-src 'self';
+              img-src 'self' https://dgital.io;
+              script-src 'self' 'unsafe-inline' 'nonce-<your-nonce>';
+              style-src 'self' 'unsafe-inline';
+            `.replace(/\s{2,}/g, ' ').trim()
           },
           {
             key: "Strict-Transport-Security",
