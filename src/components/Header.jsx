@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation'; // Cambiado a next/navigation
 import Logo from '@/assets/logo-white-svg.svg';
 import LanguageSelector from '@/components/LanguageSelector';
 import { Menu, X } from 'lucide-react';
@@ -11,14 +12,22 @@ import Modal from '@/components/Modal';
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 0);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const goToSection = (e, href) => {
+    e.preventDefault();
+    router.push(href);
+    setIsMobileMenuOpen(false); // Cierra el menú móvil después de la navegación
+  };
 
   return (
     <header className={`sticky top-0 z-50 transition-colors duration-300 ${isSticky ? 'bg-gradient-to-br from-gray-900 to-gray-800 shadow-lg' : 'bg-transparent'} text-white`}>
@@ -36,23 +45,16 @@ export default function Header() {
 
         {/* Menú de Navegación en pantallas grandes */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="#servicios" className="text-lg font-medium hover:text-blue-400 transition duration-300 ">
+          <Link href="#servicios" onClick={(e) => goToSection(e, '/#servicios')} className="text-lg font-medium hover:text-blue-400 transition duration-300">
             Servicios
           </Link>
-          {/* <Link href="#portafolio" className="text-lg font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
-            Portafolio
-          </Link> */}
-          <Link href="#sobre-nosotros" className="text-lg font-medium hover:text-blue-400 transition duration-300 ">
+          <Link href="/quienes-somos" className="text-lg font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
             Sobre Nosotros
           </Link>
-          {/* <Link href="#contacto" className="text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
-            Contacto
-          </Link> */}
         </nav>
 
         {/* Modal y Selector de Idioma en todas las pantallas */}
         <div className="flex items-center ">
-          {/* <LanguageSelector /> Selector de idioma */}
           <Modal /> {/* Modal de contacto */}
         </div>
 
@@ -69,32 +71,20 @@ export default function Header() {
       {/* Menú móvil */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-gray-800 text-white py-4 space-y-2 px-4 shadow-lg transition duration-300">
-          <Link href="#servicios" className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
+          <Link href="#servicios" onClick={(e) => goToSection(e, '/#servicios')} className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
             Servicios
           </Link>
-          {/* <Link href="#portafolio" className="block text-sm font-medium hover:text-blue-400 transition duration-300 hover:underline underline-offset-4">
-            Portafolio
-          </Link> */}
-          <Link href="#sobre-nosotros" className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
+          <Link href="#sobre-nosotros" onClick={(e) => goToSection(e, '/#sobre-nosotros')} className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
             Sobre Nosotros
           </Link>
-          <Link href="#contacto" className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
+          <Link href="#contacto" onClick={(e) => goToSection(e, '/#contacto')} className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
             Contacto
           </Link>
-
-          {/* Selector de idioma también accesible en móviles */}
-          {/* <div className="mt-4">
-            <LanguageSelector />
-          </div> */}
         </div>
       )}
     </header>
   );
 }
-
-
-
-
 
 
 
