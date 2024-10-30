@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Añade este CSS al archivo global */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: linear-gradient(to bottom right, #1f2937, #1c1f24);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
 
 
 
