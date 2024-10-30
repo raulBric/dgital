@@ -74,10 +74,10 @@ export default function Header() {
           <Link href="#servicios" onClick={(e) => goToSection(e, '/#servicios')} className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
             Servicios
           </Link>
-          <Link href="#sobre-nosotros" onClick={(e) => goToSection(e, '/#sobre-nosotros')} className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
+          <Link href="/quienes-somos" onClick={(e) => goToSection(e, '/sobre-nosotros')} className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
             Sobre Nosotros
           </Link>
-          <Link href="#contacto" onClick={(e) => goToSection(e, '/#contacto')} className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
+          <Link href="/contacto" onClick={(e) => goToSection(e, '/contacto')} className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
             Contacto
           </Link>
         </div>
