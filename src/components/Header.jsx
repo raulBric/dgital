@@ -32,9 +32,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${
-      isScrolled ? 'bg-gradient-to-br from-gray-900 to-gray-800 shadow-lg' : 'bg-transparent'
-    }`}>
+    <header className={`sticky top-0 z-50 transition-colors duration-300 ${isSticky ? 'bg-gradient-to-br from-gray-900 to-gray-800 shadow-lg' : 'bg-transparent'} text-white`}>
       <div className="flex justify-between items-center w-full px-4 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -58,7 +56,7 @@ export default function Header() {
         </nav>
 
         {/* Modal y Selector de Idioma en todas las pantallas */}
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <Modal /> {/* Modal de contacto */}
         </div>
 
@@ -77,8 +75,8 @@ export default function Header() {
         <div className="md:hidden bg-gray-800 text-white py-4 space-y-2 px-4 shadow-lg transition duration-300">
           <a href="/#servicios" onClick={(e) => navigateToSection(e, '/#servicios')} className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
             Servicios
-          </a>
-          <Link href="/quienes-somos" className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
+          </Link>
+          <Link href="/quienes-somos" onClick={(e) => goToSection(e, '/sobre-nosotros')} className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
             Sobre Nosotros
           </Link>
           <Link href="/contacto" className="block text-lg text-center font-medium hover:text-blue-400 transition duration-300">
@@ -89,3 +87,8 @@ export default function Header() {
     </header>
   );
 }
+
+
+
+
+
