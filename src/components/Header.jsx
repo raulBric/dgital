@@ -69,11 +69,11 @@ export default function Header() {
 
         {/* Menú hamburguesa visible solo en móviles */}
         <button 
-          className="md:hidden p-1 w-8 h-8 rounded-full transition duration-300 hover:bg-gray-700"
+          className="md:hidden p-1 w-8 h-8 rounded-full transition duration-300  hover:bg-gray-700"
           onClick={toggleMobileMenu}
           aria-label="Abrir menú de navegación"
         >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isMobileMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
         </button>
       </div>
 
