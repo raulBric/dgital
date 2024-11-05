@@ -23,7 +23,7 @@ export default function Modal() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -32,16 +32,16 @@ export default function Modal() {
         },
         body: JSON.stringify(formData),
       });
-
-      if (!res.ok) {
+  
+      if (res.status === 200) {
+        alert('Mensaje enviado con éxito');
+        setIsOpen(false);
+        setFormData({ nombre: '', apellidos: '', email: '', mensaje: '' });
+      } else {
         const errorText = await res.text();
         console.error('Error en el servidor:', errorText);
-        throw new Error(`Error en el servidor: ${errorText}`);
+        alert('Error al enviar el mensaje. Revisa la consola para más detalles.');
       }
-
-      alert('Mensaje enviado con éxito');
-      setIsOpen(false);
-      setFormData({ nombre: '', apellidos: '', email: '', mensaje: '' });
     } catch (error) {
       console.error('Error al enviar el mensaje:', error);
       alert('Error al enviar el mensaje. Revisa la consola para más detalles.');
