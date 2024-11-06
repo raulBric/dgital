@@ -1,4 +1,5 @@
 import Head from "next/head";
+import "@/app/globals.css";
 
 export const metadata = {
     title: "Dgital - Consultoría y Desarrollo Digital",
