@@ -1,6 +1,7 @@
 import { TrendingUp, Layers, Code, BarChart } from "lucide-react";
 import Head from "next/head";
 import Link from "next/link";
+import Modal from "@/components/Modal";
 
 export default function DigitalConsultingService() {
   return (
@@ -27,20 +28,14 @@ export default function DigitalConsultingService() {
                   Impulsa la transformación digital de tu empresa con nuestras soluciones estratégicas diseñadas para optimizar y automatizar tus procesos.
                 </p>
               </div>
-              <div className="space-x-4">
+              {/* <div className="space-x-4">
                 <a
                   href="#"
                   className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50"
                 >
                   Solicitar Consulta
                 </a>
-                <a
-                  href="#"
-                  className="inline-block px-6 py-3 border border-white text-white font-medium rounded-md hover:bg-white hover:text-blue-600"
-                >
-                  Ver Casos de Éxito
-                </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -100,12 +95,12 @@ export default function DigitalConsultingService() {
                   Contáctanos hoy para una consulta personalizada y descubre cómo nuestras soluciones de consultoría digital pueden revolucionar tu negocio.
                 </p>
               </div>
-              <a
+                           {/* <a
                 href="#"
                 className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50"
               >
                 Contactar Ahora
-              </a>
+              </a> */}
             </div>
           </div>
         </section>

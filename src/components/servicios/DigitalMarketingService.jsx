@@ -27,7 +27,7 @@ export default function DigitalMarketingService() {
                   Potencia tu marca y aumenta tu presencia en línea con nuestras soluciones personalizadas de marketing digital.
                 </p>
               </div>
-              <div className="space-x-4">
+              {/* <div className="space-x-4">
                 <a
                   href="#"
                   className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50"
@@ -40,7 +40,7 @@ export default function DigitalMarketingService() {
                 >
                   Ver Casos de Éxito
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -100,12 +100,12 @@ export default function DigitalMarketingService() {
                   Contáctanos hoy para una consulta gratuita y descubre cómo podemos llevar tu negocio al siguiente nivel con estrategias de marketing digital.
                 </p>
               </div>
-              <a
+              {/* <a
                 href="#"
                 className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50"
               >
                 Contactar Ahora
-              </a>
+              </a> */}
             </div>
           </div>
         </section>

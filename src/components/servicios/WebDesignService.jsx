@@ -24,14 +24,14 @@ export default function WebDesignService() {
                   Transformamos tus ideas en sitios web impresionantes. Diseño personalizado, responsive y optimizado para el éxito de tu negocio.
                 </p>
               </div>
-              <div className="space-x-4">
+              {/* <div className="space-x-4">
                 <a href="#" className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50">
                   Solicitar Cotización
                 </a>
                 <a href="#" className="inline-block px-6 py-3 border border-white text-white font-medium rounded-md hover:bg-white hover:text-blue-600">
                   Ver Portafolio
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -91,9 +91,9 @@ export default function WebDesignService() {
                   Contáctanos hoy para una consulta gratuita y descubre cómo podemos llevar tu negocio al siguiente nivel.
                 </p>
               </div>
-              <a href="#" className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50">
+              {/* <a href="#" className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50">
                 Contactar Ahora
-              </a>
+              </a> */}
             </div>
           </div>
         </section>

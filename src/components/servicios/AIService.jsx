@@ -27,7 +27,7 @@ export default function AIService() {
                   Potencia la innovación con inteligencia artificial. Implementamos soluciones personalizadas de IA para automatizar y optimizar tus procesos.
                 </p>
               </div>
-              <div className="space-x-4">
+              {/* <div className="space-x-4">
                 <a
                   href="#"
                   className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50"
@@ -40,7 +40,7 @@ export default function AIService() {
                 >
                   Ver Casos de Éxito
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -100,12 +100,12 @@ export default function AIService() {
                   Contáctanos hoy para una consulta personalizada y descubre cómo nuestras soluciones de inteligencia artificial pueden transformar tu empresa.
                 </p>
               </div>
-              <a
+              {/* <a
                 href="#"
                 className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50"
               >
                 Contactar Ahora
-              </a>
+              </a> */}
             </div>
           </div>
         </section>

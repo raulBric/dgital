@@ -59,7 +59,7 @@ export default function Modal() {
 
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="rounded-lg p-4 w-full max-w-md mx-auto overflow-auto max-h-[90vh] relative bg-white dark:bg-gray-800 text-black dark:text-white">
+          <div className={`${className} rounded-lg p-4 w-full max-w-md mx-auto overflow-auto max-h-[90vh] relative bg-white dark:bg-gray-800 text-black dark:text-white`}>
             <button
               className="absolute top-3 right-3 text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white focus:outline-none"
               onClick={closeModal}

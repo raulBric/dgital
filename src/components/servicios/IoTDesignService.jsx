@@ -27,7 +27,7 @@ export default function IoTDesignService() {
                   Desarrollamos soluciones IoT que conectan dispositivos, mejoran la eficiencia operativa y permiten el análisis en tiempo real.
                 </p>
               </div>
-              <div className="space-x-4">
+              {/* <div className="space-x-4">
                 <a
                   href="#"
                   className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50"
@@ -40,7 +40,7 @@ export default function IoTDesignService() {
                 >
                   Ver Proyectos
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -100,12 +100,12 @@ export default function IoTDesignService() {
                   Contáctanos hoy para una consulta y descubre cómo nuestras soluciones IoT pueden transformar tu negocio.
                 </p>
               </div>
-              <a
+              {/* <a
                 href="#"
                 className="inline-block px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50"
               >
                 Contactar Ahora
-              </a>
+              </a> */}
             </div>
           </div>
         </section>
