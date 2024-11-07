@@ -50,9 +50,9 @@ const Footer = () => {
             className="mb-4"
           />
           <p>
-            ACME Industries Ltd.
+            hola@dgital.io.
             <br />
-            Providing reliable tech since 1992
+            Todos los derechos reservados.
           </p>
         </aside>
 
