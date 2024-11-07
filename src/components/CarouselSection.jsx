@@ -5,22 +5,22 @@ import { useSwipeable } from 'react-swipeable';
 const CarouselSection = () => {
   const slides = [
     {
-      title: 'Discovery & Planning',
-      description: 'We start by understanding your business needs and creating a tailored plan to achieve your goals bla bla',
+      title: 'User Reserach y estrategia',
+      description: 'Empezamos con una fase profunda de investigación para entender a fondo tu negocio y diseñar un plan que impulse tus metas. Cada detalle cuenta.',
       bgColor: 'bg-blue-600',
-      cta: 'Start Your Project',
+      cta: 'Da el Primer Paso',
     },
     {
-      title: 'Design & Prototyping',
-      description: 'Our expert designers create stunning prototypes that bring your ideas to life and ensure an exceptional user experience.',
+      title: 'Diseño UX/UI',
+      description: 'Nuestros diseñadores convierten tus ideas en prototipos únicos que capturan la esencia de tu marca, pensando siempre en la mejor experiencia para tus usuarios.',
       bgColor: 'bg-blue-900',
-      cta: 'See Our Work',
+      cta: 'Conoce Nuestro Estilo',
     },
     {
-      title: 'Development & Launch',
-      description: 'Our skilled developers build high-performance solutions, ensuring a smooth and successful launch of your product.',
+      title: 'Creación y Lanzamiento',
+      description: 'Con el respaldo de un equipo experimentado, desarrollamos soluciones sólidas listas para destacar en el mercado. Tu éxito es nuestra prioridad.',
       bgColor: 'bg-blue-700',
-      cta: 'Let’s Build Together',
+      cta: 'Creamos Juntos',
     },
   ];
 
@@ -63,7 +63,7 @@ const CarouselSection = () => {
                 <p className="text-sm md:text-lg mb-4 drop-shadow-md">
                   {slide.description}
                 </p>
-                <button className="btn btn-primary">{slide.cta}</button>
+                {/* <button className="btn btn-primary">{slide.cta}</button> */}
               </div>
             </div>
           ))}
