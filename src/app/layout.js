@@ -1,5 +1,6 @@
 import Head from "next/head";
 import "@/app/globals.css";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata = {
     title: "Dgital - Consultoría y Desarrollo Digital",
@@ -56,6 +57,7 @@ export default function RootLayout({ children }) {
     return (
       <html lang="es">
         <Head>
+          
           <title>{metadata.title}</title>
           <meta name="description" content={metadata.description} />
           <meta name="keywords" content={metadata.keywords.join(", ")} />
@@ -84,6 +86,7 @@ export default function RootLayout({ children }) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.structuredData) }}
           />
         </Head>
+        <GoogleTagManager gtmId="GTM-MHRK38HR" />
         <body>{children}</body>
       </html>
     );
