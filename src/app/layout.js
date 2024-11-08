@@ -1,6 +1,11 @@
 import Head from "next/head";
 import "@/app/globals.css";
 import { GoogleTagManager } from '@next/third-parties/google'
+import dynamic from 'next/dynamic';
+
+const MiComponente = dynamic(() => import('../components/Container'), {
+  ssr: false, // Esto asegura que el componente solo se cargue en el cliente
+});
 
 export const metadata = {
     title: "Dgital - Consultoría y Desarrollo Digital",
@@ -87,7 +92,7 @@ export default function RootLayout({ children }) {
           />
         </Head>
         <GoogleTagManager gtmId="GTM-MHRK38HR" />
-        <body>{children}</body>
+        <body><MiComponente />{children}          </body>
       </html>
     );
 }
