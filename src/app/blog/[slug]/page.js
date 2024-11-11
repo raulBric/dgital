@@ -33,7 +33,7 @@ export default function ArticlePage({ params }) {
   const article = articles.find((article) => article.slug === slug);
 
   if (!article) {
-    return <p>Artículo no encontrado</p>;
+    return <p className="text-gray-800 dark:text-gray-100">Artículo no encontrado</p>;
   }
 
   // Datos estructurados en JSON-LD
@@ -56,22 +56,22 @@ export default function ArticlePage({ params }) {
       "name": "Dgital.io",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.dgital.io/logo.png" // URL del logo de la empresa
+        "url": "https://www.dgital.io/logo.png"
       }
     },
     "description": article.description
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
       <Head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
-      <h1 className="text-3xl font-bold text-gray-800">{article.title}</h1>
-      <p className="text-gray-600 text-sm mt-2">{article.date}</p>
+      <h1 className="text-3xl font-bold">{article.title}</h1>
+      <p className="text-gray-800 dark:text-gray-300 text-sm mt-2">{article.date}</p>
       <div className="my-4">
         <Image
           src={article.image}
@@ -81,14 +81,14 @@ export default function ArticlePage({ params }) {
           className="rounded-lg"
         />
       </div>
-      <p className="text-lg text-gray-700">{article.description}</p>
+      <p className="text-lg">{article.description}</p>
       
       {/* Renderizando el contenido del artículo */}
       <div className="mt-6 space-y-6">
         {article.content.map((section, index) => (
           <div key={index}>
-            <h2 className="text-3xl font-semibold text-gray-800">{section.section}</h2>
-            <p className="text-gray-700 mt-10 text-lg">{section.text}</p>
+            <h2 className="text-3xl font-semibold">{section.section}</h2>
+            <p className="mt-10 text-lg text-gray-700 dark:text-gray-300">{section.text}</p>
           </div>
         ))}
       </div>
