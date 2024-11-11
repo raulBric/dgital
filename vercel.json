@@ -1,16 +1,3 @@
-{
-    "redirects": [
-      {
-        "source": "/(.*)",  
-        "destination": "https://www.dgital.io/$1",
-        "permanent": true
-      },
-      {
-        "source": "/",
-        "destination": "https://www.dgital.io",
-        "permanent": true
-      }
-    ]
-  }
-  
+
+
   
