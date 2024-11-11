@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function NotFoundPage() {
   return (
-    <>
+    <header className="bg-gradient-to-br from-gray-900 to-gray-800">
     <Header />
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-purple-700 to-indigo-500 text-white p-4">
       <h1 className="text-9xl font-extrabold drop-shadow-lg">404</h1>
@@ -21,7 +21,7 @@ export default function NotFoundPage() {
       </button>
     </div>
     <Footer />
-    </>
+    </header>
 
   );
 }
