@@ -5,7 +5,7 @@ import { useSwipeable } from 'react-swipeable';
 const CarouselSection = () => {
   const slides = [
     {
-      title: 'User Reserach y estrategia',
+      title: 'User Research y estrategia',
       description: 'Empezamos con una fase profunda de investigación para entender a fondo tu negocio y diseñar un plan que impulse tus metas. Cada detalle cuenta.',
       bgColor: 'bg-blue-600',
       cta: 'Da el Primer Paso',

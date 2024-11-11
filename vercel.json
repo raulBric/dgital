@@ -1,0 +1,20 @@
+{
+    "redirects": [
+      {
+        "source": "http://dgital.io/(.*)",
+        "destination": "https://www.dgital.io/$1",
+        "permanent": true
+      },
+      {
+        "source": "http://www.dgital.io/(.*)",
+        "destination": "https://www.dgital.io/$1",
+        "permanent": true
+      },
+      {
+        "source": "https://dgital.io/(.*)",
+        "destination": "https://www.dgital.io/$1",
+        "permanent": true
+      }
+    ]
+  }
+  
