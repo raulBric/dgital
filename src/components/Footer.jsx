@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from "react";
+import Blog from "@/assets/blog-solid.svg"
 import Image from "next/image"; // Importa el componente Image de Next.js
 import Logo from "@/assets/logo-white-svg.svg"; // Importa el logo en formato SVG
 import Twitter from "@/assets/x-twitter-brands-solid.svg"; // Importa el icono de Twitter
@@ -103,6 +104,14 @@ const Footer = () => {
               <Image 
                 src={Linkedin} 
                 alt="Linkedin" 
+                width={24} 
+                height={24}
+              />
+            </Link>
+            <Link href="/blog" className="link link-hover">
+              <Image 
+                src={Blog} 
+                alt="blog" 
                 width={24} 
                 height={24}
               />
