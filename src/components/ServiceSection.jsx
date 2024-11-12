@@ -13,7 +13,7 @@ export default function ServicesSection() {
       title: "Marketing Digital",
       description: "Estrategias efectivas para aumentar tu presencia online y atraer clientes.",
       icon: Megaphone,
-      link: "/marketingdigital",
+      link: "/marketing-digital",
     },
     {
       title: "Consultoría Digital",

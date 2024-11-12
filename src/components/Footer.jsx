@@ -50,11 +50,11 @@ const Footer = () => {
             height={150} 
             className="mb-4"
           />
-          <p>
-            hola@dgital.io.
-            <br />
-            Todos los derechos reservados.
-          </p>
+        <p>
+          <a href="mailto:hola@dgital.io">hola@dgital.io</a>
+          <br />
+          Todos los derechos reservados.
+        </p>
         </aside>
 
         {/* Sección de Servicios */}
@@ -76,8 +76,8 @@ const Footer = () => {
         {/* Sección Legal */}
         <nav className="flex flex-col items-center md:items-start text-center md:text-left space-y-2">
           <h6 className="footer-title font-semibold">Legal</h6>
-          <Link href="/politica-privacidad" className="link link-hover">Pólitica de Privacidad</Link>
-          <Link href="/politica-cookies" className="link link-hover">Pólitica de Cookies</Link>
+          <Link href="/politica-privacidad" className="link link-hover">Política de Privacidad</Link>	
+          <Link href="/politica-cookies" className="link link-hover">Política de Cookies</Link>
         </nav>
 
         {/* Sección de Redes Sociales */}
@@ -124,7 +124,7 @@ const Footer = () => {
           <h6 className="footer-title font-semibold">Newsletter</h6>
           <div className="form-control w-80">
             <label className="label">
-              <span className="label-text text-white">Enter your email address</span>
+              <span className="label-text text-white">Ingresa tu correo electrónico</span>
             </label>
             <div className="relative">
               <input
