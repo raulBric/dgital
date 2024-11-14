@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ['img.daisyui.com', 'images.unsplash.com', 'tse1.mm.bing.net', 'safaricom.co.ke'], // Agrega aquí todos los dominios desde los que cargarás imágenes externas
-      },
+  images: {
+    domains: [
+      'img.daisyui.com', 
+      'images.unsplash.com', 
+      'tse1.mm.bing.net', 
+      'safaricom.co.ke'
+    ], // Dominios permitidos para cargar imágenes externas
+    formats: ['image/avif', 'image/webp'], // Formatos optimizados para las imágenes
+  },
 };
 
-
 export default nextConfig;
+
