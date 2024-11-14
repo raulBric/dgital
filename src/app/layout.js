@@ -1,6 +1,7 @@
 import Head from "next/head";
 import "@/app/globals.css";
 import { GoogleTagManager } from '@next/third-parties/google'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 export const metadata = {
@@ -88,7 +89,10 @@ export default function RootLayout({ children }) {
           />
         </Head>
         <GoogleTagManager gtmId="GTM-MHRK38HR" />
-        <body>{children}</body>
+        <body>
+        {children}
+        <SpeedInsights />
+        </body>
       </html>
     );
 }
