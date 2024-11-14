@@ -5,7 +5,7 @@ import { GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata = {
     title: "Dgital - Consultoría y Desarrollo Digital",
-    description: "Dgital ofrece servicios de consultoría y desarrollo digital para impulsar la transformación digital de tu negocio.",
+    description: "Ofrecemos servicios de consultoría y desarrollo digital para impulsar la transformación digital de tu negocio.",
     keywords: [
       "consultoría digital",
       "desarrollo digital",
