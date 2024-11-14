@@ -23,7 +23,7 @@ export default function HeroSection() {
   // Función para manejar la suscripción
   const handleSubscribe = async (e) => {
     e.preventDefault();
-
+  
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -32,11 +32,18 @@ export default function HeroSection() {
         },
         body: JSON.stringify({ email }),
       });
-
+  
       if (!res.ok) {
         throw new Error('Error en el servidor');
       }
-
+  
+      // Llama al evento de Google Tag Manager para la conversión
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'conversion_event_contact_1', {
+          // Parámetros opcionales de evento
+        });
+      }
+  
       alert('Solicitud enviada con éxito');
       setEmail(''); // Limpia el campo de email después de enviar
     } catch (error) {
@@ -44,6 +51,7 @@ export default function HeroSection() {
       alert('Error al suscribirse.');
     }
   };
+  
 
   return (
     <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
