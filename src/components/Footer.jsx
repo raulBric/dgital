@@ -76,8 +76,8 @@ const Footer = () => {
         {/* Sección Legal */}
         <nav className="flex flex-col items-center md:items-start text-center md:text-left space-y-2">
           <h6 className="footer-title font-semibold">Legal</h6>
-          <Link href="/politica-privacidad" className="link link-hover">Política de Privacidad</Link>	
-          <Link href="/politica-cookies" className="link link-hover">Política de Cookies</Link>
+          <Link href="/politica-privacidad" className="link link-hover" rel="nofollow">Política de Privacidad</Link>	
+          <Link href="/politica-cookies" className="link link-hover" rel="nofollow">Política de Cookies</Link>
         </nav>
 
         {/* Sección de Redes Sociales */}

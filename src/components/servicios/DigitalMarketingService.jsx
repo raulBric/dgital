@@ -21,7 +21,7 @@ export default function BlogIndexPage() {
           <div className="container px-4 md:px-6">
             <div className="space-y-4">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-                Bienvenido al Blog de Dgital
+                Marketing Digital
               </h1>
               <p className="mx-auto max-w-[700px] text-blue-100 md:text-xl">
                 Descubre las mejores estrategias de marketing digital y consejos de expertos para transformar tu negocio en línea.
@@ -30,7 +30,7 @@ export default function BlogIndexPage() {
           </div>
         </section>
 
-        {/* Blog Articles */}
+        {/* Blog Articles
         <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-blue-900">
@@ -66,7 +66,7 @@ export default function BlogIndexPage() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Highlights Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
