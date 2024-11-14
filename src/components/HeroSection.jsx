@@ -6,7 +6,8 @@ import { Mail } from "lucide-react";
 export default function HeroSection() {
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
-  const [email, setEmail] = useState(''); // Estado para el email
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState(''); // Estado para el mensaje de error
   const fullText = "dgital = your tech partner();";
 
   // Efecto de escritura para el texto animado
@@ -23,27 +24,28 @@ export default function HeroSection() {
   // Función para manejar la suscripción
   const handleSubscribe = async (e) => {
     e.preventDefault();
-  
+
+    // Validación de email en el frontend
+    if (!email) {
+      setError('Introduce un email'); // Mensaje de error si email está vacío
+      return;
+    } else {
+      setError(''); // Limpia el mensaje de error si el email es válido
+    }
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email }), // Solo envía email al backend
       });
-  
+
       if (!res.ok) {
         throw new Error('Error en el servidor');
       }
-  
-      // Llama al evento de Google Tag Manager para la conversión
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion_event_contact_1', {
-          // Parámetros opcionales de evento
-        });
-      }
-  
+
       alert('Solicitud enviada con éxito');
       setEmail(''); // Limpia el campo de email después de enviar
     } catch (error) {
@@ -51,7 +53,6 @@ export default function HeroSection() {
       alert('Error al suscribirse.');
     }
   };
-  
 
   return (
     <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
@@ -65,30 +66,35 @@ export default function HeroSection() {
           <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl">
             Empoderamos a las empresas con soluciones innovadoras.
           </p>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl">
-            Nuestro equipo de expertos convierte tus ideas en realidad.
-          </p>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 items-center">
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:max-w-lg relative">
               <Mail className="absolute left-4 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" />
               <input
                 type="email"
                 placeholder="Correo electrónico"
-                className="w-full border border-gray-300 rounded-3xl p-3 sm:p-4 pl-12 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500 
-                  dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:border-blue-400"
+                className={`w-full border rounded-3xl p-3 sm:p-4 pl-12 sm:pl-12 pr-4 text-gray-700 focus:outline-none focus:border-blue-500 
+                  dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:border-blue-400 ${
+                    error ? 'border-red-500' : 'border-gray-300'
+                  }`}
                 value={email}
-                onChange={(e) => setEmail(e.target.value)} // Maneja el cambio de email
+                onChange={(e) => setEmail(e.target.value)}
+                onFocus={() => setError('')} // Limpia el error al enfocar
               />
+              {error && (
+                <p className="text-red-500 text-sm mt-1 absolute -bottom-6 left-4">
+                  {error}
+                </p>
+              )}
               <button
                 className="hidden sm:block bg-blue-600 text-white font-semibold py-2 sm:py-4 px-4 sm:px-6 rounded-3xl hover:bg-blue-700"
-                onClick={handleSubscribe} // Maneja la suscripción al hacer clic
+                onClick={handleSubscribe}
               >
                 ¿Hablamos?
               </button>
             </div>
             <button
               className="sm:hidden w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-3xl hover:bg-blue-700"
-              onClick={handleSubscribe} // Maneja la suscripción para dispositivos móviles
+              onClick={handleSubscribe}
             >
               Empieza tu proyecto
             </button>
