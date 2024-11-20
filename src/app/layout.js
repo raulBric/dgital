@@ -13,7 +13,9 @@ export const metadata = {
       "transformación digital",
       "Dgital",
       "tecnología",
-      "negocios digitales"
+      "negocios digitales",
+      "consultoría",
+      "desarrollo web"
     ],
     author: "Dgital.io",
     robots: "index, follow",
