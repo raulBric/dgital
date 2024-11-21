@@ -60,8 +60,8 @@ const Footer = () => {
         {/* Sección de Servicios */}
         <nav className="flex flex-col items-center md:items-start text-center md:text-left space-y-2">
           <h6 className="footer-title font-semibold">Servicios</h6>
-          <Link href="/servicios" className="link link-hover">Diseño Web</Link>
-          <Link href="/marketingdigital" className="link link-hover">Marketing Digital</Link>
+          <Link href="/desarrollo-web" className="link link-hover">Diseño Web</Link>
+          <Link href="/marketing-digital" className="link link-hover">Marketing Digital</Link>
           <Link href="/consultoria-digital" className="link link-hover">Consultoria Digital</Link>
           <Link href="soluciones-ia" className="link link-hover">Inteligencia Artificial</Link>
         </nav>

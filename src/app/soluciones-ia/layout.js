@@ -1,5 +1,3 @@
-import { Metadata } from "next";
-
 export const metadata = {
     title: "Soluciones en IA - Dgital",
     description: "Impulsa tu negocio con nuestras soluciones de inteligencia artificial personalizadas. En Dgital, aplicamos IA para optimizar procesos y mejorar la toma de decisiones.",

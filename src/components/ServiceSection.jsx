@@ -7,7 +7,7 @@ export default function ServicesSection() {
       title: "Diseño Web",
       description: "Creamos sitios web atractivos y funcionales que representan tu marca.",
       icon: Monitor,
-      link: "/diseno-web",
+      link: "/desarrollo-web",
     },
     {
       title: "Marketing Digital",

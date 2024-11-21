@@ -1,5 +1,3 @@
-import { Metadata } from "next";
-
 export const metadata = {
     title: "Mentoría Digital - Dgital",
     description: "Recibe orientación personalizada con nuestros servicios de mentoría digital. En Dgital, te ayudamos a impulsar tus proyectos digitales con estrategias efectivas y a medida.",

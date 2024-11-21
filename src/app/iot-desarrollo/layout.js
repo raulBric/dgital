@@ -1,5 +1,3 @@
-import { Metadata } from "next";
-
 export const metadata = {
     title: "Desarrollo IoT - Dgital",
     description: "Explora nuestras soluciones en desarrollo IoT para impulsar la conectividad y la inteligencia en tu negocio. Especialistas en tecnología IoT para transformar tu industria.",
