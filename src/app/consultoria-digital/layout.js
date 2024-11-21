@@ -1,5 +1,3 @@
-import { Metadata } from "next";
-
 export const metadata = {
     title: "Consultoría Digital - Dgital",
     description: "Descubre cómo nuestra consultoría digital puede impulsar tu negocio hacia el éxito online. Nos especializamos en estrategias personalizadas, transformación digital y desarrollo web para ayudarte a alcanzar tus objetivos de manera eficiente y efectiva.",

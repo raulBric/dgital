@@ -1,5 +1,3 @@
-import { Metadata } from "next";
-
 export const metadata = {
     title: "Marketing Digital - Dgital",
     description: "Potencia la presencia online de tu negocio con nuestras estrategias de marketing digital. En Dgital, transformamos tu marca para alcanzar tus objetivos.",

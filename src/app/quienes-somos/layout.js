@@ -1,5 +1,3 @@
-import { Metadata } from "next";
-
 export const metadata = {
     title: "Quiénes Somos - Dgital",
     description: "Conoce al equipo de Dgital, nuestra misión y los valores que nos inspiran a ofrecer servicios de consultoría y desarrollo digital de alta calidad.",

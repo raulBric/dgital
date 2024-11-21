@@ -1,5 +1,3 @@
-import { Metadata } from "next";
-
 export const metadata = {
     title: "Diseño Web - Dgital",
     description: "Transforma tu presencia online con nuestros servicios de diseño web personalizados. En Dgital, creamos sitios web atractivos y funcionales que representan tu marca.",
