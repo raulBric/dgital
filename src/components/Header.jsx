@@ -7,6 +7,7 @@ import Logo from '@/assets/logo-white-svg.svg';
 import { Menu, X } from 'lucide-react';
 import Modal from '@/components/Modal';
 
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
