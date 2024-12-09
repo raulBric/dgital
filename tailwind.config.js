@@ -14,4 +14,7 @@ module.exports = {
   	extend: {},
   },
   plugins: [require('daisyui'), require("tailwindcss-animate")],
+  images: {
+    domains: ['dgital.io'], // Configura dominios válidos para imágenes externas
+  },
 }
