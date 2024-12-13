@@ -1,5 +1,6 @@
 import Cookies from 'js-cookie';
-import cookie from 'cookie';
+import * as cookie from 'cookie';
+
 
 // CLIENTE
 export const setCookie = (key, value, options = {}) => {

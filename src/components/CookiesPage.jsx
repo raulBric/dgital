@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Cookies() {
+export default function CookiesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       <main className="p-8 max-w-4xl mx-auto space-y-12">

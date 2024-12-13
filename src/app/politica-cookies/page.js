@@ -1,5 +1,4 @@
-import React from 'react';
-import Cookies from '@/components/Cookies';
+import CookiesPage from '@/components/CookiesPage';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
@@ -9,7 +8,7 @@ export default function CookiesPolicyPage() {
       <div className="sticky top-0 z-50">
         <Header />
       </div>
-      <Cookies />
+      <CookiesPage />
       <Footer />
     </main>
   );

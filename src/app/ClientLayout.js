@@ -1,44 +1,65 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import CookieBanner from "@/components/CookieBanner";
-import CookieSettingsModal from "@/components/CookieSettingsModal";
+import React, { useState, useEffect } from 'react';
+import CookieBanner from '@/components/CookieBanner';
+import CookiesSettingsModal from '@/components/CookiesSeetingsModal';
 import { GoogleTagManager } from '@next/third-parties/google';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { setCookie, getCookie } from '@/utils/cookies';
 
 export default function ClientLayout({ children }) {
   const [showSettings, setShowSettings] = useState(false);
-  const [consent, setConsent] = useState(null);
+  const [cookieSettings, setCookieSettings] = useState({
+    essential: true,
+    performance: false,
+    functionality: false,
+    advertising: false,
+  });
 
   useEffect(() => {
-    const savedConsent = localStorage.getItem('cookieConsent');
-    if (savedConsent) {
-      setConsent(savedConsent);
+    const savedSettings = JSON.parse(localStorage.getItem('cookieSettings'));
+    if (savedSettings) {
+      setCookieSettings(savedSettings);
     }
   }, []);
 
-  useEffect(() => {
-    if (consent === 'all') {
+  const handleConsentChange = (settings) => {
+    setCookieSettings(settings);
+    localStorage.setItem('cookieSettings', JSON.stringify(settings));
+
+    const consentLevel = Object.values(settings).some((val) => val) ? 'partial' : 'none';
+    setCookie('cookieConsent', consentLevel, { expires: 365 });
+
+    if (settings.performance || settings.advertising) {
       console.log("Cargando scripts de análisis y marketing...");
+    } else {
+      console.log("Cookies rechazadas o limitadas.");
     }
-    if (consent === 'none') {
-      console.log("Cookies rechazadas. No se cargan scripts.");
-    }
-  }, [consent]);
+  };
 
   const handleAcceptAll = () => {
-    localStorage.setItem('cookieConsent', 'all');
-    setConsent('all');
+    const allSettings = {
+      essential: true,
+      performance: true,
+      functionality: true,
+      advertising: true,
+    };
+    handleConsentChange(allSettings);
   };
 
   const handleRejectAll = () => {
-    localStorage.setItem('cookieConsent', 'none');
-    setConsent('none');
+    const noSettings = {
+      essential: true,
+      performance: false,
+      functionality: false,
+      advertising: false,
+    };
+    handleConsentChange(noSettings);
   };
 
   return (
     <>
-      {consent === 'all' && <GoogleTagManager gtmId="GTM-MHRK38HR" />}
+      {cookieSettings.performance && <GoogleTagManager gtmId="GTM-MHRK38HR" />}
       {children}
       <CookieBanner
         onAccept={handleAcceptAll}
@@ -46,12 +67,13 @@ export default function ClientLayout({ children }) {
         onManageCookies={() => setShowSettings(true)}
       />
       {showSettings && (
-        <CookieSettingsModal
+        <CookiesSettingsModal
+          initialSettings={cookieSettings}
           onClose={() => setShowSettings(false)}
-          onConsentChange={setConsent}
+          onConsentChange={handleConsentChange}
         />
       )}
-      {consent === 'all' && <SpeedInsights />}
+      {cookieSettings.performance && <SpeedInsights />}
     </>
   );
 }
