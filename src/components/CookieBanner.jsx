@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { setCookie, getCookie } from '@/utils/cookies';
 import Link from 'next/link';
 
-const CookieBanner = ({ onManageCookies }) => {
+const CookieBanner = ({ onAccept, onReject, onManageCookies }) => {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
@@ -13,16 +13,12 @@ const CookieBanner = ({ onManageCookies }) => {
   }, []);
 
   const handleAcceptAll = () => {
-    setCookie('cookieConsent', 'all', { expires: 365 });
-    setCookie('analyticsConsent', 'true', { expires: 365 });
-    setCookie('marketingConsent', 'true', { expires: 365 });
+    onAccept(); // Usamos la función proporcionada por `ClientLayout`
     setShowBanner(false);
   };
 
   const handleRejectAll = () => {
-    setCookie('cookieConsent', 'none', { expires: 365 });
-    setCookie('analyticsConsent', 'false', { expires: 365 });
-    setCookie('marketingConsent', 'false', { expires: 365 });
+    onReject(); // Usamos la función proporcionada por `ClientLayout`
     setShowBanner(false);
   };
 
@@ -40,7 +36,7 @@ const CookieBanner = ({ onManageCookies }) => {
           Política de cookies
         </p>
         <p className="text-gray-800 dark:text-gray-200 text-sm mb-4">
-          Utilizamos cookies propias y de terceros para analizar tu navegación en nuestro sitio web, mostrarte publicidad personalizada, la personalización de contenidos y redes sociales. Al hacer clic en “Aceptar cookies”, aceptas que las cookies se guarden en tu dispositivo para mejorar la navegación del sitio, analizar el uso del mismo, y colaborar con nuestros estudios de marketing.
+          Utilizamos cookies propias y de terceros para analizar tu navegación en nuestro sitio web. Al hacer clic en “Aceptar cookies”, aceptas que las cookies se guarden en tu dispositivo para mejorar la navegación del sitio, analizar el uso del mismo, y colaborar con nuestros estudios de marketing.
         </p>
         <p className="text-gray-800 dark:text-gray-200 text-sm mb-4">
           Consulta para más información nuestra <Link href="/politica-cookies" className="text-blue-600 dark:text-blue-400 underline">política de cookies</Link>.
@@ -50,19 +46,19 @@ const CookieBanner = ({ onManageCookies }) => {
             onClick={handleAcceptAll}
             className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
           >
-            Aceptar Todas
+            Aceptar
           </button>
           <button
             onClick={handleRejectAll}
-            className="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded"
+            className="bg-white border border-blue-500 hover:border-blue-400 hover:text-blue-400 text-blue-500 px-4 py-2 rounded"
           >
-            Rechazar Todas
+            Rechazar
           </button>
           <button
             onClick={handleManageCookies}
-            className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded"
+            className="bg-white text-blue-600 underline px-4 py-2"
           >
-            Gestionar Cookies
+            Preferencias
           </button>
         </div>
       </div>
@@ -71,4 +67,3 @@ const CookieBanner = ({ onManageCookies }) => {
 };
 
 export default CookieBanner;
-

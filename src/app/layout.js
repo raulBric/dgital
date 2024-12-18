@@ -1,3 +1,4 @@
+import Head from "next/head";
 import ClientLayout from "@/app/ClientLayout"; // Importa el layout de cliente
 import "@/app/globals.css";
 
@@ -49,6 +50,39 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <Head>
+          
+          <title>{metadata.title}</title>
+          <meta name="description" content={metadata.description} />
+          <meta name="keywords" content={metadata.keywords.join(", ")} />
+          <meta name="author" content={metadata.author} />
+          <meta name="robots" content={metadata.robots} />
+          <link rel="canonical" href={metadata.openGraph.url} />
+
+          {/* Open Graph básico */}
+          <meta property="og:type" content={metadata.openGraph.type} />
+          <meta property="og:url" content={metadata.openGraph.url} />
+          <meta property="og:title" content={metadata.openGraph.title} />
+          <meta property="og:description" content={metadata.openGraph.description} />
+          {/* <meta property="og:image" content={metadata.openGraph.image} /> */}
+
+          {/* Twitter Card básico */}
+          <meta name="twitter:card" content={metadata.twitter.card} />
+          <meta name="twitter:site" content={metadata.twitter.site} />
+          <meta name="twitter:creator" content={metadata.twitter.creator} />
+          <meta name="twitter:title" content={metadata.twitter.title} />
+          <meta name="twitter:description" content={metadata.twitter.description} />
+          {/* <meta name="twitter:image" content={metadata.twitter.image} /> */}
+
+          {/* Datos estructurados básicos */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.structuredData) }}
+          />
+        </Head>
+      
+      
+      
       <body>
         {/* Pasamos los children y lógica de cliente a ClientLayout */}
         <ClientLayout>{children}</ClientLayout>

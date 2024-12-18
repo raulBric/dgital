@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import CookieBanner from '@/components/CookieBanner';
-import CookiesSettingsModal from '@/components/CookiesSeetingsModal';
+import CookiesSettingsModal from '@/components/CookieSettingsModal';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { setCookie, getCookie } from '@/utils/cookies';
@@ -27,8 +27,10 @@ export default function ClientLayout({ children }) {
     setCookieSettings(settings);
     localStorage.setItem('cookieSettings', JSON.stringify(settings));
 
-    const consentLevel = Object.values(settings).some((val) => val) ? 'partial' : 'none';
-    setCookie('cookieConsent', consentLevel, { expires: 365 });
+    // Configurar cookies
+    setCookie('cookieConsent', settings.advertising ? 'all' : 'partial', { expires: 365 });
+    setCookie('analyticsConsent', settings.performance.toString(), { expires: 365 });
+    setCookie('marketingConsent', settings.advertising.toString(), { expires: 365 });
 
     if (settings.performance || settings.advertising) {
       console.log("Cargando scripts de análisis y marketing...");
@@ -62,7 +64,7 @@ export default function ClientLayout({ children }) {
       {cookieSettings.performance && <GoogleTagManager gtmId="GTM-MHRK38HR" />}
       {children}
       <CookieBanner
-        onAccept={handleAcceptAll}
+        onAccept={handleAcceptAll} // Cambiado para usar la función centralizada
         onReject={handleRejectAll}
         onManageCookies={() => setShowSettings(true)}
       />
