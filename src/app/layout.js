@@ -1,6 +1,7 @@
 import Head from "next/head";
 import ClientLayout from "@/app/ClientLayout"; // Importa el layout de cliente
 import "@/app/globals.css";
+import WhatsAppButton from "@/components/WhatsappButton";
 
 export const metadata = {
   title: "Dgital - Consultoría y Desarrollo Digital",
@@ -85,6 +86,7 @@ export default function RootLayout({ children }) {
       
       <body>
         {/* Pasamos los children y lógica de cliente a ClientLayout */}
+        <WhatsAppButton />
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
