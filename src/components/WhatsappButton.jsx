@@ -7,7 +7,7 @@ const WhatsAppButton = () => {
         href="https://wa.me/34610019952?text=¡Hola! Quiero más información."
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-14 h-14 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600 transition transform hover:rotate-45 duration-300"
+        className="flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition transform hover:rotate-45 duration-300"
         aria-label="WhatsApp"
       >
         <svg
