@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function FasesProyecto() {
   return (
     <section className="bg-gray-900 text-white py-16 px-6 sm:py-20 sm:px-8 md:py-24 md:px-12 lg:px-24">
