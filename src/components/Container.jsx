@@ -6,6 +6,8 @@ import FAQSection from './FAQSection';
 import Footer from './Footer';
 import CarouselSection from './CarouselSection';
 import ContactSection from './ContactSection';
+import FasesProyecto from './FasesProyecto';
+import Precios from './Precios';
 
 
 
@@ -17,7 +19,8 @@ export default function Container() {
       {/* <ServicesSection /> */}
       <div className="bg-white">
       <ServicesSection />
-      <CarouselSection />
+      {/* <CarouselSection /> */}
+      <FasesProyecto />
       </div>
       <div className="bg-gray-200">
       <FAQSection />
