@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import WebDesignService from "@/components/servicios/WebDesignService";
 import Footer from "@/components/Footer";
+import Precios from "@/components/Precios";
 
 export default function ServiciosPage() {
   return (
