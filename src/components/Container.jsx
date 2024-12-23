@@ -4,10 +4,10 @@ import HeroSection from './HeroSection';
 import ServicesSection from './ServiceSection';
 import FAQSection from './FAQSection';
 import Footer from './Footer';
-import CarouselSection from './CarouselSection';
 import ContactSection from './ContactSection';
 import FasesProyecto from './FasesProyecto';
-import Precios from './Precios';
+import WhatsAppButton from './WhatsappButton';
+
 
 
 
@@ -26,6 +26,7 @@ export default function Container() {
       <FAQSection />
       </div>
       <ContactSection />
+      <WhatsAppButton />
       <Footer />
     </div>
   );
