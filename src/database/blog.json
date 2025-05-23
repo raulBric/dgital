@@ -216,6 +216,52 @@
           "text": "La inteligencia artificial y los LLM están en el centro de una revolución tecnológica que está transformando cómo trabajamos y nos comunicamos. Su potencial es inmenso, pero su implementación debe ser responsable, ética y transparente. En 2025, la clave será equilibrar innovación con valores humanos, asegurándonos de que estas tecnologías construyan un futuro más conectado, eficiente y justo."
       }
   ]
+},
+{
+  "id": 7,
+  "slug": "dgital-nuevo-miembro-pimec",
+  "title": "Dgital se integra como nuevo miembro de PIMEC para acelerar la transformación digital de las pymes",
+  "tags": ["PIMEC", "Servicios Digitales", "Transformación Digital", "Consultoría Digital", "Pymes"],
+  "author": {
+    "name": "Raúl Bricio",
+    "role": "Consultor de Negocio Digital",
+    "image": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+  },
+  "date": "2025-05-23",
+  "image": "/blogImage/Pimec.webp",
+  "content": [
+    {
+      "section": "Dgital, nuevo miembro de PIMEC",
+      "text": "Dgital, consultoría especializada en desarrollo web y servicios digitales, se ha incorporado como nuevo miembro de PIMEC, la entidad que representa a más de 260.000 micro, pequeñas y medianas empresas de Cataluña. Con esta adhesión, Dgital refuerza su compromiso con la modernización tecnológica del tejido empresarial catalán."
+    },
+    {
+      "section": "PIMEC: la voz de las pymes catalanas",
+      "text": "PIMEC (Petita i Mitjana Empresa de Catalunya) es una organización sin ánimo de lucro que defiende los intereses de las pymes y los autónomos, ofreciendo formación, asesoramiento y representación institucional. Integrarse en PIMEC permite a Dgital participar en comisiones sectoriales y foros de debate centrados en la digitalización empresarial."
+    },
+    {
+      "section": "Motivación de Dgital para unirse a PIMEC",
+      "text": "La decisión de integrarnos en PIMEC nace de nuestro propósito de compartir conocimiento en transformación digital, colaborar en los grupos de trabajo, y tejer alianzas con otras pymes para impulsar proyectos tecnológicos de alto valor."
+    }
+    ,
+    {
+      "section": "Aportación de Dgital a la comunidad de PIMEC",
+      "text": "Dgital aporta una visión integral que combina estrategia empresarial, diseño centrado en el usuario y analítica de resultados. Nuestro trabajo se orienta a maximizar el rendimiento de las plataformas digitales, automatizar procesos clave del negocio y aumentar la visibilidad online.”."
+    }
+    ,
+    {
+      "section": "Servicios digitales ",
+      "text": "Consultoría estratégica y estudio de negocio para definir el camino digital más rentable; desarrollo y evolución de sitios web y tiendas online centrados en experiencia de usuario y conversión; blended marketing que integra acciones online y offline para amplificar marca y ventas; automatización de procesos de marketing y ventas para escalar captación y fidelización."
+    }
+    
+    ,
+    {
+      "section": "Conclusión",
+      "text": "Con Dgital como nuevo miembro, PIMEC suma un aliado experto en consultoría estratégica, desarrollo web y blended marketing, capaz de compartir buenas prácticas, liderar proyectos colaborativos y acelerar la digitalización rentable de las pymes catalanas."
+    }
+    
+  ]
 }
+
+
 
 ]
