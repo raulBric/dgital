@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+  }
+
+  body {
+    @apply bg-white text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent text-white;
+  }
+}
+
+@layer components {
+  /* Degradado oscuro (negro → azul marino con un toque cobalto). Solo hero y CTA final. */
+  .fondo-degradado {
+    background-color: #0a0a0a;
+    background-image:
+      radial-gradient(80% 90% at 100% 0%, rgba(31, 79, 224, 0.28) 0%, transparent 55%),
+      linear-gradient(160deg, #0a0a0a 35%, #0a1633 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

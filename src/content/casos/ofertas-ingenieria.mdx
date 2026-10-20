@@ -1,0 +1,48 @@
+Una ingeniería industrial de 10 personas recibía entre 6 y 8 peticiones de oferta a la semana. Cada una le costaba a un técnico unas 3 horas. Hoy el técnico dedica entre 15 y 20 minutos a revisar un borrador que ya viene hecho. Así lo montamos.
+
+## El problema: 3 horas por oferta
+
+Cada petición llegaba por correo, y casi nunca de forma ordenada. Planos en PDF, especificaciones en Word, requisitos repartidos entre el cuerpo del mensaje y los adjuntos.
+
+Para cada una, un técnico tenía que:
+
+- Leerlo todo y entender qué pedía el cliente.
+- Buscar ofertas parecidas de otros años para no empezar de cero.
+- Calcular las horas de trabajo.
+- Redactar el documento en la plantilla de Word de la empresa.
+
+Unas 3 horas por oferta. Con 6-8 peticiones semanales, eso son entre 18 y 24 horas semanales del equipo técnico dedicadas a preparar documentos en lugar de a hacer ingeniería.
+
+El coste no era solo de horas. Las ofertas salían 3-5 días después de la petición y algunas oportunidades se perdían por no responder a tiempo. En un sector donde el cliente suele pedir precio a varias empresas a la vez, quien responde antes tiene ventaja.
+
+## La solución, paso a paso
+
+No cambiamos ninguna herramienta de la empresa. Montamos un flujo que trabaja sobre su correo, su carpeta de ofertas y su plantilla de siempre.
+
+<FlujoDiagrama slug="ofertas-ingenieria" />
+
+<PasosSolucion slug="ofertas-ingenieria" />
+
+Dos detalles marcan la diferencia:
+
+**Usa el histórico de la empresa.** El borrador no sale de la nada: se apoya en las 3 ofertas anteriores más parecidas. Así respeta cómo trabaja la empresa, cómo describe sus servicios y cómo calcula las horas.
+
+**Detecta lo que falta.** Si la petición no trae un dato necesario (un plazo, una cantidad, una especificación), el sistema prepara también el correo al cliente pidiéndolo. El técnico solo tiene que revisarlo y enviarlo.
+
+## Herramientas utilizadas
+
+<Herramientas slug="ofertas-ingenieria" />
+
+n8n coordina el flujo: recibe el correo, extrae el texto de los adjuntos y mueve los documentos. Claude lee la petición, la compara con el histórico y redacta. Los borradores se guardan en la carpeta de ofertas de siempre (Google Drive o SharePoint) con la plantilla corporativa.
+
+## Resultados
+
+<Resultados slug="ofertas-ingenieria" />
+
+<Frase slug="ofertas-ingenieria" />
+
+## ¿Se puede aplicar en tu empresa?
+
+Si recibís peticiones por correo y preparáis ofertas o presupuestos con una plantilla, probablemente sí. Funciona igual en ingenierías, consultoras técnicas, instaladoras o distribuidores industriales: cambia la plantilla y el tipo de datos, pero el proceso es el mismo.
+
+En el diagnóstico gratuito revisamos cómo preparáis hoy las ofertas, cuántas horas os cuestan y qué parte se puede automatizar.
